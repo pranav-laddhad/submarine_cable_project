@@ -1,0 +1,239 @@
+fault_id,news_id,Cable,Region,Fault Location,Date of Fault,Date of Repair,Repair duration (Days),Fault Cause,Category,Category from news articles,Final Inferred Category
+4,4,Kingisepp-Kaliningrad System (Baltika),Europe, ,2025-02-08,n.a.,n.a.,external impact,Human Activity,,Human Activity
+7,7,Darwin-Jakarta-Singapore Cable (DJSC),Oceania,off the coast of Port Hedland,2025-01-28,2025-03-02,33,anchor,Human Activity,,Human Activity
+8,8,North West Cable System,Oceania, ,2025-01-28,2025-02-28,31,anchor,Human Activity,,Human Activity
+9,9,Sweden-Latvia,Europe,between Latvian town of Ventspils to Sweden's Gotland island within Sweden's exclusive economic zone,2025-01-26,n.a.,n.a.,external force,Human Activity,,Human Activity
+13,13,Trans-Pacific Express (TPE) Cable System,Trans-Pacific,close to the port of Keelung on Taiwan’s north coast,2025-01-03,n.a.,n.a.,Ship/anchor,Human Activity,Geopolitical,Geopolitical
+16,16,C-Lion1,Europe,"Gulf of Finland, southeast of Porkkalanniemi",2024-12-26,2025-01-07,12,Ship/anchor,Human Activity,,Human Activity
+17,17,Baltic Sea Submarine Cable,Europe,between Finland and Estonia in the Gulf of Finland,2024-12-26,n.a.,n.a.,Ship/anchor,Human Activity,Geopolitical,Geopolitical
+18,18,Finland Estonia Connection (FEC),Europe,between Finland and Estonia in the Gulf of Finland,2024-12-26,2025-01-06,11,Ship/anchor,Human Activity,Geopolitical,Geopolitical
+22,22,Greenland Connect,Europe, ,2024-12-10,2024-12-11,1,Maintenance,Human Activity,,Human Activity
+28,28,Taiwan Penghu Kinmen Matsu No.2 (TPKM2),Asia, ,2024-09-22,2025-03-14,173,partial core fibre break,Human Activity,,Human Activity
+31,31,Eastern Africa Submarine System (EASSy),Africa, ,2024-08-22,n.a.,n.a.,shunt fault,Human Activity,Human Activity,Human Activity
+42,42,Africa Coast to Europe (ACE),Africa,"off Dakhla (MA Western Sahara) Seg 1-7, between BU-1C and BU-1D",2024-06-07,2024-06-19,12,shunt fault,Human Activity,,Human Activity
+62,62,South American Crossing (SAC),Latin America,off the coast of Rio de Janeiro,2023-09-11,2023-10-10,29,anchor,Human Activity,,Human Activity
+67,67,Africa Coast to Europe (ACE),Africa,near Tema,2023-06-29,n.a.,n.a.,"defective BU3A, shunt fault",Human Activity,,Human Activity
+69,69,Coral Sea Cable System (CS²),Oceania,close to the Port of Honiara,2023-05-10,n.a.,n.a.,anchor,Human Activity,Human Activity,Human Activity
+71,71,West Africa Cable System (WACS),Africa,100km from the coast of the MATOMBI station in Pointe-Noire,2023-03-31,2023-04-09,9,fishing gear,Human Activity,,Human Activity
+75,75,Taiwan Penghu Kinmen Matsu no.3 (TPKM3),Asia,around 40km from 'Matsu-Nangan computer room',2023-02-08,2023-03-31,51,cargo ship,Human Activity,,Human Activity
+77,77,Asia Pacific Gateway (APG),Asia,"S9 branch, 151km offshore",2023-01-21,2023-03-31,69,technical issue,Human Activity,,Human Activity
+81,81,Asia Africa Europe-1 (AAE-1),Europe-Asia,"S1H.1, 3km from Aguilar station",2022-11-30,2023-05-20,171,shunt fault,Human Activity,,Human Activity
+83,83,SHEFA-2,Europe,Shetland-Scottish mainland section,2022-10-20,2022-10-23,3,fishing vessels,Human Activity,Human Activity,Human Activity
+84,84,SHEFA-2,Europe,Shetland-Faroe Islands section,2022-10-13,2022-10-23,10,fishing vessels,Human Activity,Human Activity,Human Activity
+90,90,Greenland Connect,Europe,off Narsaq,2022-08-21,2022-08-27,6,"a power failure on the cable, which impairs operational safety’",Human Activity,Human Activity,Human Activity
+95,95,SeaMeWe-5,Europe-Asia,Egypt,2022-06-07,2022-06-07,0,technical failure,Human Activity,,Human Activity
+96,96,Asia Africa Europe-1 (AAE-1),Europe-Asia,Egypt,2022-06-07,2022-06-07,0,technical failure,Human Activity,,Human Activity
+97,97,Coral Sea Cable System (CS²),Oceania, ,2022-05-22,2022-05-29,7,planned outage (deferred from May to October 2022);  'critical precautionary measure to mitigate serious issues over the life of this asset' after shunt fault detected in early 2021,Human Activity,,Human Activity
+99,99,Basslink,Oceania, ,2022-03-02,2022-03-11,9,third-party fault on the network,Human Activity,,Human Activity
+100,100,Bass Strait-1,Oceania,on the Tasmanian side',2022-03-01,2022-03-01,0,cause under investigation,Human Activity,,Human Activity
+101,101,Bass Strait-2,Oceania,Melbourne ,2022-03-01,2022-03-01,0,cut during civil works,Human Activity,,Human Activity
+103,103,Transworld (TW1),Middle East,40km from Karachi,2022-02-21,2022-03-09,16,damage likely caused by a vessel's anchor,Human Activity,,Human Activity
+104,104,FALCON,Middle East,Al Hudaydah (Yemen),2022-01-21,2022-01-25,4,airstrike on a telecom hub,Human Activity,Geopolitical,Geopolitical
+105,105,FALCON,Middle East,Dubai and Khasab (Oman),2022-01-20,2022-01-29,9,fishing trawler,Human Activity,Geopolitical,Geopolitical
+106,106,FALCON,Middle East,between Al Faw (Iraq) and Bandar Abbas (Iran),2022-01-20,2022-01-29,9,fishing trawler,Human Activity,Geopolitical,Geopolitical
+110,110,Svalbard Undersea Cable System,Europe,between 130km-230km from Longyearbyen,2022-01-07,n.a.,n.a.,fault in the power supply,Human Activity,Unknown,Human Activity
+113,113,SeaMeWe-4,Europe-Asia,near Karachi,2021-12-21,n.a.,n.a.,Ship/anchor,Human Activity,Aging,Aging
+122,122,Asia-America Gateway (AAG) Cable System,Trans-Pacific,S1B branch,2021-08-11,2021-10-10,60,Equipment failure,Human Activity,,Human Activity
+123,123,Australia-Singapore Cable (ASC),Oceania,Off Perth,2021-08-01,2021-08-16,15,Ship/anchor,Human Activity,Human Activity,Human Activity
+127,127,Europe India Gateway (EIG),Europe-Asia, ,2021-05-25,n.a.,n.a.,Equipment failure,Human Activity,,Human Activity
+139,139,Eastern Caribbean Fiber System (ECFS),Latin America,"Off Sainte-Rose, Guadeloupe",2020-12-11,2020-12-12,1,Ship/anchor,Human Activity,,Human Activity
+147,147,Eastern Africa Submarine System (EASSy),Africa,"Off Mogadishu, Somalia",2020-07-26,2020-07-27,1,Equipment failure,Human Activity,Human Activity,Human Activity
+152,152,Estepona-Tetouan,Mediterranean, ,2020-05-15,2020-05-16,1,Ship/anchor,Human Activity,,Human Activity
+162,162,Africa Coast to Europe (ACE),Africa,"Off Nouakchott, Mauritania",2020-04-03,2020-04-17,14,Ship/anchor,Human Activity,,Human Activity
+179,179,FALCON,Middle East,Between Oman and Egypt,2020-01-09,2020-08-25,229,Ship/anchor,Human Activity,Human Activity,Human Activity
+180,180,FLAG Europe-Asia (FEA),Europe-Asia,Between India and Egypt,2020-01-09,2020-02-15,37,Ship/anchor,Human Activity,,Human Activity
+181,181,Asia Africa Europe-1 (AAE-1),Europe-Asia,"Off Doha, Qatar",2019-12-15,2019-12-16,1,Equipment failure,Human Activity,,Human Activity
+199,199,Lower Indian Ocean Network 2 (LION2),Africa,Off Kenya,2018-10-03,2018-10-10,7,Ship/anchor,Human Activity,,Human Activity
+202,202,Asia-America Gateway (AAG) Cable System,Trans-Pacific,"Off Vung Tau, Vietnam",2018-08-23,n.a.,n.a.,Equipment failure,Human Activity,,Human Activity
+225,225,Eastern Africa Submarine System (EASSy),Africa, ,2017-06-23,2017-08-14,52,Ship/anchor,Human Activity,,Human Activity
+228,228,West Africa Cable System (WACS),Africa,"Off Point-Noire, Congo, Rep.",2017-06-09,2017-06-27,18,Ship/anchor,Human Activity,Human Activity,Human Activity
+10,10,Taiwan Penghu Kinmen Matsu No.2 (TPKM2),Asia,between Taiwan and Matsu,2025-01-22,2025-03-14,51,natural deterioration; additional wire damage detected in Feb-25,Aging,,Aging
+11,11,Taiwan Penghu Kinmen Matsu No.3 (TPKM3),Asia,between Taiwan and Matsu,2025-01-15,2025-03-02,46,natural deterioration,Aging,,Aging
+20,20,Interchange Cable Network 1 (ICN1),Oceania,"Port Vila, Vanuatu ",2024-12-17,2024-12-27,10,Fire at Vanuatu landing station following 7.3 earthquake,Environmental,,Environmental
+63,63,Africa Coast to Europe (ACE),Africa, ,2023-08-07,2023-09-13,37,rock fall in the Congo Canyon',Environmental,,Environmental
+64,64,SAT-3/WASC,Africa,between the Democratic Republic of Congo and Cameroon,2023-08-07,2023-09-19,43,rock fall in the Congo Canyon',Environmental,,Environmental
+65,65,West Africa Cable System (WACS),Africa,between the Democratic Republic of Congo and Cameroon,2023-08-07,2023-09-06,30,rock fall in the Congo Canyon',Environmental,Environmental,Environmental
+68,68,Quintillion Subsea Cable Network,Other,55km north of Oliktok Point,2023-06-13,2023-10-30,139,ice scour,Environmental,,Environmental
+85,85,COGIM,Other,14km from shore,2022-09-26,n.a.,n.a.,Hurricane Fiona,Environmental,,Environmental
+88,88,PIPE Pacific Cable-1 (PPC-1),Oceania,17km to 170km outside of Madang,2022-09-11,2022-11-07,57,earthquake,Environmental,,Environmental
+89,89,Kumul Domestic Submarine Cable System,Asia,17km to 170km outside of Madang,2022-09-11,n.a.,n.a.,earthquake,Environmental,Aging,Environmental
+107,107,Tonga Domestic Cable Extension (TDCE),Oceania,47kms off Nuku’alofa,2022-01-16,2023-07-12,542,tsunami caused by the Hunga Tonga volcanic eruption,Environmental,Unknown,Environmental
+108,108,Tonga Cable,Oceania,37kms off Nuku’alofa,2022-01-16,2022-02-22,37,tsunami caused by the Hunga Tonga volcanic eruption,Environmental,Unknown,Environmental
+217,217,Asia-America Gateway (AAG) Cable System,Trans-Pacific, ,2017-08-30,2017-09-26,27,Storm,Environmental,,Environmental
+218,218,Asia-America Gateway (AAG) Cable System,Trans-Pacific,54 km off Hong Kong,2017-08-27,2017-09-30,34,Storm,Environmental,,Environmental
+219,219,Tata TGN-Intra Asia (TGN-IA),Asia,54 km off Hong Kong,2017-08-27,2017-09-30,34,Storm,Environmental,,Environmental
+220,220,SeaMeWe-3,Europe-Asia,54 km off Hong Kong,2017-08-27,2017-10-18,52,Storm,Environmental,Human Activity,Environmental
+227,227,MainOne,Africa,"3,000 km south of Portugal",2017-06-18,2017-07-02,14,Geological,Environmental,Aging,Aging
+66,66,Asia Pacific Gateway (APG),Asia,S1.7 section to Singapore,2023-06-30,2023-09-30,92,cable data flow operating at half capacity',Unknown,Aging,Aging
+117,117,Asia-America Gateway (AAG) Cable System,Trans-Pacific,S1I branch between Vietnam and Hong Kong,2021-10-22,2022-03-13,142,3 fault points discovered,Unknown,Aging,Aging
+1,1,PEACE Cable,Europe-Asia,"in the Red Sea, 1,450km from Zafarana",2025-03-04,n.a.,n.a., ,,,
+2,2,NorthStar,Other, ,2025-02-28,n.a.,n.a., ,,,
+3,3,C-Lion1,Europe,Sweeden Economic Zone ,2025-02-19,n.a.,n.a., ,,,
+5,5,Asia Pacific Gateway (APG),Asia,S1.9 branch,2025-02-01,n.a.,n.a., ,,,
+6,6,Asia Pacific Gateway (APG),Asia,"S9 branch, located 143km from Singapore CLS",2025-02-01,n.a.,n.a., ,,,
+12,12,FALCON,Middle East, ,2025-01-04,n.a.,n.a., ,,,
+14,14,Asia Africa Europe-1 (AAE-1),Europe-Asia,near Qatar,2025-01-03,2025-01-16,13, ,,Human Activity,Human Activity
+15,15,Tata TGN-Intra Asia (TGN-IA),Asia,S1 branch between Vietnam and Singapore; 190km from Singapore CLS,2024-12-26,2025-02-28,64, ,,,
+19,19,HDR2, , ,2024-12-24,2025-01-02,9, ,,,
+21,21,DANICE,Europe, ,2024-12-10,2024-12-11,1, ,,,
+23,23,Asia Pacific Gateway (APG),Asia,S1.9 branch to Malaysia,2024-12-01,n.a.,n.a., ,,,
+24,24,Asia Pacific Gateway (APG),Asia,S8 branch near Thailand,2024-11-29,2025-01-10,42, ,,,
+25,25,C-Lion1,Europe,between Finland and Germany,2024-11-18,2024-11-28,10, ,,Geopolitical,Geopolitical
+26,26,BCS East-West Interlink,Europe, ,2024-11-17,2024-11-28,11, ,,,
+27,27,FALCON,Middle East,"between Kuwait and Al-Khobar, Saudi Arabia",2024-09-25,2024-09-29,4, ,,Human Activity,Human Activity
+29,29,Fibralink,Latin America,Kaliko,2024-09-14,n.a.,n.a., ,,,
+30,30,Alaska United East (AU-East),Other,30 miles off Sitka,2024-08-29,n.a.,n.a., ,,,
+32,32,Africa Coast to Europe (ACE),Africa,off Abidjan,2024-08-21,n.a.,n.a., ,,,
+33,33,Africa Coast to Europe (ACE),Africa,off Lisbon,2024-08-21,n.a.,n.a., ,,,
+34,34,Amitie,Trans-Atlantic,Segment 1.2 in UK EEZ,2024-08-01,2024-08-31,30, ,,,
+35,35,Tonga Domestic Cable Extension (TDCE),Oceania, ,2024-06-29,n.a.,n.a., ,,,
+36,36,Maya-1,Latin America,between Isla Mujeres and Cozumel,2024-06-21,2024-09-11,82, ,,,
+37,37,SeaMeWe-4,Europe-Asia, ,2024-06-18,2024-11-01,136, ,,,
+38,38,Tata TGN-Intra Asia (TGN-IA),Asia,S1 and S5 branches,2024-06-13,2024-09-30,109, ,,,
+39,39,Asia Africa Europe-1 (AAE-1),Europe-Asia,"S1H5 branch, connecting Vietnam to Singapore",2024-06-12,2024-12-06,177, ,,,
+40,40,Asia Africa Europe-1 (AAE-1),Europe-Asia,S1H3 branch connecting Cambodia and Vietnam,2024-06-12,2024-09-15,95, ,,Unknown,
+41,41,Asia Pacific Gateway (APG),Asia,four branches affected,2024-06-12,2024-09-30,110, ,,,
+43,43,Eastern Africa Submarine System (EASSy),Africa,between South Africa and Mozambique,2024-05-12,2024-05-23,11, ,,Geopolitical,Geopolitical
+44,44,SEACOM/Tata TGN-Eurasia,Africa,between South Africa and Mozambique,2024-05-12,2024-05-31,19, ,,Human Activity,Human Activity
+45,45,SeaMeWe-5,Europe-Asia,"in the straits of Mallaca, 440km from Singapore",2024-04-19,2024-06-27,69, ,,Human Activity,Human Activity
+46,46,SAT-3/WASC,Africa,off the coast of Côte d'Ivoire,2024-03-14,2024-04-06,23, ,,Environmental,Environmental
+47,47,MainOne,Africa,off the coast of Côte d'Ivoire,2024-03-14,2024-05-08,55, ,,Human Activity,Human Activity
+48,48,Africa Coast to Europe (ACE),Africa,off the coast of Côte d'Ivoire,2024-03-14,2024-04-17,34, ,,Environmental,Environmental
+49,49,West Africa Cable System (WACS),Africa,off the coast of Côte d'Ivoire,2024-03-14,2024-04-29,46, ,,Environmental,Environmental
+50,50,SEACOM/Tata TGN-Eurasia,Africa,between Kenya and Egypt,2024-02-24,2024-07-23,150, ,,Geopolitical,Geopolitical
+51,51,Asia Africa Europe-1 (AAE-1),Europe-Asia,between Jeddah in Saudi Arabia and Djibouti in East Africa,2024-02-15,2024-07-12,148, ,,,
+52,52,Europe India Gateway (EIG),Europe-Asia,between Jeddah in Saudi Arabia and Djibouti in East Africa,2024-02-15,2024-07-23,159, ,,,
+53,53,Honotua,Oceania, ,2024-02-02,2024-02-12,10, ,,,
+54,54,HDR2, , ,2024-01-04,n.a.,n.a., ,,,
+55,55,AEC-1,Trans-Atlantic,"off Belmullet, county Mayo (Ireland)",2023-11-16,n.a.,n.a., ,,,
+56,56,Far East Submarine Cable System,Asia,near Ust'-Bol'sheretsk,2023-11-15,2023-11-16,1, ,,,
+57,57,Baltic Sea Submarine Cable,Europe,happened at a similar time and in physical proximity ... to the damage that was previously reported to a gas pipeline between Estonia and Finland and a telecommunications cable between Estonia and Finland',2023-10-08,n.a.,n.a., ,,,
+58,58,Baltica,Europe,external influence',2023-10-07,2023-11-13,37, ,,,
+59,59,Sakhalin-Kuril Islands Cable,Asia, ,2023-10-07,n.a.,n.a., ,,,
+60,60,Concerto,Europe,"in the North sea, within the UK EEZ",2023-10-01,n.a.,n.a., ,,,
+61,61,Asia Africa Europe-1 (AAE-1),Europe-Asia, ,2023-09-27,2023-11-30,64, ,,,
+70,70,Asia Pacific Gateway (APG),Asia,"S7 branch, 206km from Da Nang",2023-04-22,2023-06-29,68, ,,,
+72,72,South America-1 (SAm-1),Latin America,30km off the coast of Bahia,2023-03-04,2023-04-04,31, ,,,
+73,73,SeaMeWe-3,Europe-Asia,S2.7 segent conencting Vietnam to Singapore,2023-02-22,2023-05-03,70, ,,Aging,Aging
+74,74,Taiwan Penghu Kinmen Matsu no.2 (TPKM2),Asia,around 40km from 'Matsu-Nangan computer room',2023-02-08,n.a.,n.a., ,,,
+76,76,Tata TGN-Intra Asia (TGN-IA),Asia,about 130 km from a landing station in Singapore,2023-01-28,2023-05-03,95, ,,,
+78,78,Asia-America Gateway (AAG) Cable System,Trans-Pacific,S1G branch,2023-01-15,2023-05-31,136, ,,,
+79,79,Asia-America Gateway (AAG) Cable System,Trans-Pacific,S1I branch,2022-12-27,2023-05-24,148, ,,,
+80,80,Asia Pacific Gateway (APG),Asia,"S6 branch, off Hong Kong landing station",2022-12-26,2023-05-31,156, ,,,
+82,82,SeaMeWe-5,Europe-Asia,terrestrial section in Egypt,2022-10-29,n.a.,n.a., ,,,
+86,86,Asia Pacific Gateway (APG),Asia,S9 segment to Sigapore,2022-09-15,2022-11-14,60, ,,,
+87,87,IMEWE,Europe-Asia,between Alexandria and Marseille,2022-09-12,n.a.,n.a.,malfunction',,Aging,Aging
+91,91,SeaMeWe-5,Europe-Asia,at the junction of the Suez Canal and the Mediterranean Sea near Egypt,2022-08-11,n.a.,n.a., ,,Human Activity,Human Activity
+92,92,Asia Pacific Gateway (APG),Asia,"S3 branch, 427km from China",2022-07-26,n.a.,n.a., ,,Aging,Aging
+93,93,Asia-America Gateway (AAG) Cable System,Trans-Pacific,S1B and S1D segments,2022-06-30,n.a.,n.a., ,,,
+94,94,Asia-America Gateway (AAG) Cable System,Trans-Pacific,S1H and S1I segments (near Hong Kong),2022-06-30,2022-09-15,77, ,,,
+98,98,SMPCS Packet-2,Asia,289km from the Merauke landing station,2022-03-27,n.a.,n.a., ,,,
+102,102,Tata TGN-Intra Asia (TGN-IA),Asia, ,2022-02-25,2022-02-27,2, ,,,
+109,109,SeaMeWe-4,Europe-Asia,in the Indian Ocean,2022-01-13,n.a.,n.a., ,,Aging,Aging
+111,111,Africa Coast to Europe (ACE),Africa,off the coast of Gambia,2022-01-04,2022-01-22,18, ,,,
+112,112,Asia Submarine-cable Express (ASE)/Cahaya Malaysia,Asia, ,2021-12-27,n.a.,n.a., ,,,
+114,114,Asia Pacific Gateway (APG),Asia,125km from Hong Kong CLS,2021-12-13,2022-02-27,76, ,,,
+115,115,Asia-America Gateway (AAG) Cable System,Trans-Pacific,branch between Vietnam and Singapore,2021-10-31,2021-12-29,59, ,,Aging,Aging
+116,116,Asia Pacific Gateway (APG),Asia,S3 segment,2021-10-29,2021-11-27,29, ,,,
+118,118,Asia Africa Europe-1 (AAE-1),Europe-Asia,"near Fujairah, UAE",2021-10-11,2021-10-12,1, ,,Human Activity,Human Activity
+119,119,JASUKA,Asia,1.5km off the Batam coast,2021-09-20,2021-10-06,16, ,,,
+120,120,Asia Africa Europe-1 (AAE-1),Europe-Asia,S1H.4 section,2021-09-07,2021-11-25,79, ,,Aging,Aging
+121,121,Asia Africa Europe-1 (AAE-1),Europe-Asia,S1H.3 segment between Vietnam and Singapore,2021-09-04,2021-11-20,77, ,,Aging,Aging
+124,124,Asia-America Gateway (AAG) Cable System,Trans-Pacific, ,2021-07-02,2021-07-17,15, ,,,
+125,125,Asia-America Gateway (AAG) Cable System,Trans-Pacific,"Off Vung Tau,Vietnam",2021-06-22,2021-07-02,10, ,,,
+126,126,Asia Africa Europe-1 (AAE-1),Europe-Asia,Off Vietnam,2021-05-25,2021-07-01,37, ,,,
+128,128,SMPCS Packet-2,Asia,"Off Jayapura, Indonesia",2021-04-30,n.a.,n.a., ,,,
+129,129,Pan European Crossing (UK-Ireland),Europe, ,2021-03-21,n.a.,n.a., ,,,
+130,130,Trans-Pacific Express (TPE) Cable System,Trans-Pacific,"Between Tamsui, Taiwan and Chongming, China",2021-03-01,n.a.,n.a., ,,,
+131,131,B2JS (Jakarta-Bangka-Batam-Singapore) Cable System,Asia,"Between Ancol and Bangka, Indonesia",2021-02-22,n.a.,n.a., ,,,
+132,132,SeaMeWe-5,Europe-Asia,Off France,2021-02-18,n.a.,n.a., ,,Human Activity,Human Activity
+133,133,SeaMeWe-4,Europe-Asia,"Off Abu Talat, Egypt",2021-02-16,n.a.,n.a., ,,Human Activity,Human Activity
+134,134,IMEWE,Europe-Asia, ,2021-02-11,n.a.,n.a., ,,Aging,Aging
+135,135,Africa Coast to Europe (ACE),Africa,"Off Brikama, Gambia",2021-02-09,2021-02-09,0, ,,,
+136,136,Asia Pacific Gateway (APG),Asia,Between Hong Kong and Japan,2021-01-09,2021-02-24,46, ,,,
+137,137,Africa Coast to Europe (ACE),Africa, ,2021-01-02,n.a.,n.a., ,,,
+138,138,Tata TGN-Intra Asia (TGN-IA),Asia,Off Singapore,2021-01-01,2021-02-25,55, ,,,
+140,140,i2i Cable Network (i2icn),Asia, ,2020-10-26,2020-10-31,5, ,,,
+141,141,Eastern Africa Submarine System (EASSy),Africa,Off Somalia,2020-10-17,2020-10-22,5, ,,,
+142,142,COBRAcable,Europe,Between Denmark and Netherlands,2020-09-30,2021-01-08,100, ,,,
+143,143,Asia-America Gateway (AAG) Cable System,Trans-Pacific,"Off Vungtau, Vietnam",2020-09-25,2020-09-30,5, ,,,
+144,144,Djibouti Africa Regional Express 1 (DARE1),Africa,"Off Mogadishu, Somalia",2020-09-15,2020-09-20,5, ,,,
+145,145,Maya-1,Latin America,Off Florida,2020-09-13,n.a.,n.a., ,,,
+146,146,High-capacity Undersea Guernsey Optical-fibre (HUGO),Europe,"Off Porthcurno beach, United Kingdom",2020-08-26,2020-09-07,12, ,,,
+148,148,Atlantic Crossing-1 (AC-1),Trans-Atlantic,"Off Sylt island, Germany",2020-07-07,2020-07-16,9, ,,,
+149,149,Asia Africa Europe-1 (AAE-1),Europe-Asia,Off Hong Kong,2020-06-03,2020-06-07,4, ,,,
+150,150,Asia Pacific Gateway (APG),Asia,Between Vietnam and Singapore,2020-05-23,2020-06-27,35, ,,Aging,Aging
+151,151,Africa Coast to Europe (ACE),Africa, ,2020-05-19,2020-05-25,6, ,,,
+153,153,Asia-America Gateway (AAG) Cable System,Trans-Pacific, ,2020-05-14,2020-06-04,21, ,,,
+154,154,Indigo-West,Oceania, ,2020-05-09,2020-05-13,4, ,,,
+155,155,Kumul Domestic Submarine Cable System,Asia, ,2020-05-07,2020-05-29,22, ,,,
+156,156,MedNautilus Submarine System,Mediterranean,Mamara Sea,2020-05-02,2020-05-07,5, ,,,
+157,157,Europe India Gateway (EIG),Europe-Asia, ,2020-04-28,2020-05-19,21, ,,,
+158,158,Europe India Gateway (EIG),Europe-Asia,Between Portugal & Gibraltar,2020-04-28,2020-05-20,22, ,,,
+159,159,APCN-2,Asia,"Between Hong Kong and Chongming, China",2020-04-09,2020-04-11,2, ,,Human Activity,Human Activity
+160,160,SeaMeWe-4,Europe-Asia,"Off Suez, Egypt",2020-04-08,2020-04-11,3, ,,,
+161,161,SeaMeWe-4,Europe-Asia,"Off Sardinia, Italy",2020-04-06,2020-04-11,5, ,,,
+163,163,TAT-14,Trans-Atlantic,"Off Katwijk, Netherlands",2020-04-03,2020-04-15,12, ,,,
+164,164,Asia-America Gateway (AAG) Cable System,Trans-Pacific, ,2020-04-02,2020-04-21,19, ,,,
+165,165,Swansea-Brean,Europe, ,2020-04-01,2020-04-03,2, ,,,
+166,166,Tata TGN-Western Europe,Europe, ,2020-03-29,2020-04-03,5, ,,,
+167,167,SeaMeWe-3,Europe-Asia,Off Algeria,2020-03-28,2020-03-31,3, ,,,
+168,168,West Africa Cable System (WACS),Africa, ,2020-03-27,2020-04-03,7, ,,Human Activity,Human Activity
+169,169,Pan-American Crossing (PAC),Latin America,Off Costa Rica,2020-03-21,2020-04-10,20, ,,,
+170,170,SAT-3/WASC,Africa,"Off Muanda, Congo, Dem. Rep.",2020-03-11,2020-03-30,19, ,,Human Activity,Human Activity
+171,171,Africa Coast to Europe (ACE),Africa, ,2020-03-06,2020-03-17,11, ,,,
+172,172,Africa Coast to Europe (ACE),Africa, ,2020-02-27,n.a.,n.a., ,,,
+173,173,SEACOM/Tata TGN-Eurasia,Africa, ,2020-02-20,2020-02-26,6, ,,,
+174,174,TAT-14,Trans-Atlantic,"Off Katwijk, Netherlands",2020-02-08,2020-02-08,0, ,,,
+175,175,West Africa Cable System (WACS),Africa,"Off Muanda, Congo, Dem. Rep.",2020-01-23,2020-02-06,14, ,,Human Activity,Human Activity
+176,176,West Africa Cable System (WACS),Africa,Off Ghana,2020-01-16,2020-02-26,41, ,,Human Activity,Human Activity
+177,177,SAT-3/WASC,Africa, ,2020-01-16,2020-02-18,33, ,,Environmental,Environmental
+178,178,West Africa Cable System (WACS),Africa, ,2020-01-16,2020-02-14,29, ,,Human Activity,
+182,182,SeaMeWe-4,Europe-Asia, ,2019-10-29,2019-10-30,1, ,,,
+183,183,FLAG Europe-Asia (FEA),Europe-Asia,Gibraltar Straits,2019-10-23,2019-10-29,6, ,,,
+184,184,SEACOM/Tata TGN-Eurasia,Africa,"Between Mombasa, Kenya and Zafarana, Egypt",2019-10-22,2019-10-23,1, ,,Human Activity,Human Activity
+185,185,SeaMeWe-3,Europe-Asia,Off Singapore,2019-10-16,2019-10-27,11, ,,Aging,Aging
+186,186,SeaMeWe-3,Europe-Asia,Bay of Biscay,2019-09-27,2019-10-08,11, ,,,
+187,187,Atlas Offshore,Mediterranean,Gibraltar Straits,2019-09-09,2019-09-19,10, ,,,
+188,188,Asia-America Gateway (AAG) Cable System,Trans-Pacific,"Off Vung Tau, Vietnam",2019-08-15,2019-09-11,27, ,,Aging,Aging
+189,189,Asia Pacific Gateway (APG),Asia,"Off Danang, Vietnam",2019-05-27,2019-06-07,11, ,,Aging,Aging
+190,190,Greenland Connect North,Other, ,2019-05-05,2019-08-22,109, ,,Human Activity,Human Activity
+191,191,Asia Pacific Gateway (APG),Asia, ,2019-04-24,2019-04-27,3, ,,,
+192,192,Asia Pacific Gateway (APG),Asia,"Off Hong Kong, China",2019-02-27,2019-04-10,42, ,,,
+193,193,Greenland Connect North,Other,"Between Sisimiut, Greenland and Maniitsoq, Greenland",2019-01-21,2019-03-14,52, ,,Aging,Aging
+194,194,Tonga Cable,Oceania, ,2019-01-20,2019-02-02,13, ,,Human Activity,Human Activity
+195,195,Tata TGN-Intra Asia (TGN-IA),Asia, ,2019-01-10,2019-02-09,30, ,,,
+196,196,Greenland Connect,Europe, ,2018-12-28,2019-05-14,137, ,,,
+197,197,SeaMeWe-3,Europe-Asia, ,2018-12-13,2018-12-13,0, ,,Human Activity,Human Activity
+198,198,Australia-Singapore Cable (ASC),Oceania, ,2018-12-13,2019-01-01,19, ,,,
+200,200,West Africa Cable System (WACS),Africa, ,2018-09-24,n.a.,n.a., ,,Human Activity,Human Activity
+201,201,SeaMeWe-3,Europe-Asia,"Between Mumbai, India and Singapore",2018-09-19,2018-09-19,0, ,,Human Activity,Human Activity
+203,203,Asia-America Gateway (AAG) Cable System,Trans-Pacific, ,2018-05-22,2018-06-04,13, ,,,
+204,204,SeaMeWe-3,Europe-Asia, ,2018-05-11,2018-06-01,21, ,,Aging,Aging
+205,205,Asia-America Gateway (AAG) Cable System,Trans-Pacific, ,2018-04-29,n.a.,n.a., ,,,
+206,206,Asia Pacific Gateway (APG),Asia,"Off Chongming, China",2018-04-23,2018-04-25,2, ,,Human Activity,Human Activity
+207,207,Africa Coast to Europe (ACE),Africa,"Off Noukachott, Mauritania",2018-03-30,2018-04-10,11, ,,Human Activity,Human Activity
+208,208,Basslink,Oceania, ,2018-03-28,2018-06-05,69, ,,Human Activity,Human Activity
+209,209,Asia Pacific Gateway (APG),Asia,Between Hong Kong and Vietnam,2018-02-27,2018-04-10,42, ,,Human Activity,Human Activity
+210,210,Bharat Lanka Cable System,Asia,"5.8 km off Tuticorin, India",2018-02-01,n.a.,n.a., ,,,
+211,211,Apollo,Trans-Atlantic, ,2018-01-28,2018-02-01,4, ,,,
+212,212,Asia-America Gateway (AAG) Cable System,Trans-Pacific, ,2018-01-09,2018-01-23,14, ,,,
+213,213,Asia Pacific Gateway (APG),Asia, ,2017-12-27,2017-12-30,3, ,,,
+214,214,Asia-America Gateway (AAG) Cable System,Trans-Pacific,"Off Vung Tau, Vietnam",2017-11-07,2017-12-31,54, ,,Aging,Aging
+215,215,Asia-America Gateway (AAG) Cable System,Trans-Pacific,Off Hong Kong ,2017-10-12,2017-10-24,12, ,,Aging,Aging
+216,216,SeaMeWe-3,Europe-Asia, ,2017-10-10,2017-10-20,10, ,,Aging,Aging
+221,221,IMEWE,Europe-Asia,Off Saudi Arabia,2017-08-05,2017-08-06,1, ,,Aging,Aging
+222,222,SAT-3/WASC,Africa,"Off Melkbosstrand, South Africa",2017-07-12,n.a.,n.a., ,,Human Activity,Human Activity
+223,223,Transworld (TW1),Middle East, ,2017-07-05,n.a.,n.a., ,,,
+224,224,SeaMeWe-4,Europe-Asia, ,2017-07-05,n.a.,n.a., ,,Aging,Aging
+226,226,Asia Pacific Gateway (APG),Asia, ,2017-06-20,n.a.,n.a., ,,,
+229,229,APCN-2,Asia, ,2017-04-22,2017-05-08,16, ,,,
+230,230,APCN-2,Asia,Off Malaysia,2017-04-11,2017-04-11,0, ,,,
+231,231,SEACOM/Tata TGN-Eurasia,Africa,Off Djibouti,2017-04-08,2017-05-24,46, ,,,
+232,232,Tata TGN-Intra Asia (TGN-IA),Asia, ,2017-03-04,2017-03-25,21, ,,,
+233,233,APCN-2,Asia, ,2017-02-21,2017-03-09,16, ,,,
+234,234,Asia-America Gateway (AAG) Cable System,Trans-Pacific,Between Vietnam and Hong Kong,2017-02-18,2017-04-06,47, ,,,
+235,235,Glo-1,Africa, ,2017-02-16,2017-02-23,7, ,,Human Activity,Human Activity
+236,236,Asia-America Gateway (AAG) Cable System,Trans-Pacific,"Off Vung Tau, Vietnam",2017-01-08,2017-01-26,18, ,,Aging,Aging
+237,237,Greenland Connect,Europe, ,2016-12-31,n.a.,n.a., ,,,
+238,238,SeaMeWe-3,Europe-Asia,1125 km off Singapore,2016-12-03,2017-01-15,43, ,,,
