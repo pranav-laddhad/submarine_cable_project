@@ -1,0 +1,2651 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6b959246e521ad4dda305b05a12343d8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 30px; left: 30px; width: 150px; height: 150px; 
+                background-color: rgba(255, 255, 255, 0.8); border: 2px solid black; 
+                padding: 10px; font-size: 12px; z-index: 9999;">
+        <b>Fault Categories</b><br>
+        <i style="background-color: orange; width: 18px; height: 18px; display: inline-block;"></i> Aging<br>
+        <i style="background-color: red; width: 18px; height: 18px; display: inline-block;"></i> Geopolitical<br>
+        <i style="background-color: blue; width: 18px; height: 18px; display: inline-block;"></i> Human Activity<br>
+        <i style="background-color: green; width: 18px; height: 18px; display: inline-block;"></i> Environmental<br>
+        <i style="background-color: gray; width: 18px; height: 18px; display: inline-block;"></i> Unknown
+    </div>
+    
+            <div class="folium-map" id="map_6b959246e521ad4dda305b05a12343d8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6b959246e521ad4dda305b05a12343d8 = L.map(
+                "map_6b959246e521ad4dda305b05a12343d8",
+                {
+                    center: [0.0, 100.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f81ee6a4140eb5e677f4537b9579b280 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f81ee6a4140eb5e677f4537b9579b280.addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+            var circle_marker_18d2bdbf9ccd8ef1c7692040e412b7e1 = L.circleMarker(
+                [20.2965624, 38.07603145578282],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_0bea9af340df87d45bf9bb91222d1666 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_277478b50e58db6d7045d3c5caaad46a = $(`<div id="html_277478b50e58db6d7045d3c5caaad46a" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> PEACE Cable<br>         <b>Fault Description:</b> in the Red Sea, 1,450km from Zafarana<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2025-03-04<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_0bea9af340df87d45bf9bb91222d1666.setContent(html_277478b50e58db6d7045d3c5caaad46a);
+            
+        
+
+        circle_marker_18d2bdbf9ccd8ef1c7692040e412b7e1.bindPopup(popup_0bea9af340df87d45bf9bb91222d1666)
+        ;
+
+        
+    
+    
+            var circle_marker_29c6be95c4787dc6cad6d34cb8d0fb31 = L.circleMarker(
+                [3.940475772228814, 103.95000059678415],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_e91cdbb6a202994f981fb90c80d18749 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0ff3be4b79093085692c0dbf5127cb60 = $(`<div id="html_0ff3be4b79093085692c0dbf5127cb60" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> S9 branch, located 143km from Singapore CLS<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2025-02-01<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_e91cdbb6a202994f981fb90c80d18749.setContent(html_0ff3be4b79093085692c0dbf5127cb60);
+            
+        
+
+        circle_marker_29c6be95c4787dc6cad6d34cb8d0fb31.bindPopup(popup_e91cdbb6a202994f981fb90c80d18749)
+        ;
+
+        
+    
+    
+            var circle_marker_db8c13b7f359185f7cad64a1e6b8cdcd = L.circleMarker(
+                [-19.800107039490765, 115.19999262658828],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_26510881427da6dc9913819ad12ec159 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_391fc5a7adb39fe2d508498968d97ead = $(`<div id="html_391fc5a7adb39fe2d508498968d97ead" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Darwin-Jakarta-Singapore Cable (DJSC)<br>         <b>Fault Description:</b> off the coast of Port Hedland<br>         <b>Region:</b> Oceania<br>         <b>Date of Fault:</b> 2025-01-28<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_26510881427da6dc9913819ad12ec159.setContent(html_391fc5a7adb39fe2d508498968d97ead);
+            
+        
+
+        circle_marker_db8c13b7f359185f7cad64a1e6b8cdcd.bindPopup(popup_26510881427da6dc9913819ad12ec159)
+        ;
+
+        
+    
+    
+            var circle_marker_a6e117c341a1afead29184b297b1cb72 = L.circleMarker(
+                [24.43748260175769, 118.43944000000037],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_3732c1674a3f79073e05b71111c61e74 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ff5f5d418a6956afc018208ea9a6d534 = $(`<div id="html_ff5f5d418a6956afc018208ea9a6d534" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Taiwan Penghu Kinmen Matsu No.2 (TPKM2)<br>         <b>Fault Description:</b> between Taiwan and Matsu<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2025-01-22<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_3732c1674a3f79073e05b71111c61e74.setContent(html_ff5f5d418a6956afc018208ea9a6d534);
+            
+        
+
+        circle_marker_a6e117c341a1afead29184b297b1cb72.bindPopup(popup_3732c1674a3f79073e05b71111c61e74)
+        ;
+
+        
+    
+    
+            var circle_marker_fddaa34dd3bfd9e4c9b89da9c7ba3dd5 = L.circleMarker(
+                [26.225407299999837, 119.98859609999977],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_5cb34a0f0622eeb79e4633d45a409139 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e6ab84dffea90dd39dea831ca0387507 = $(`<div id="html_e6ab84dffea90dd39dea831ca0387507" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Taiwan Penghu Kinmen Matsu No.3 (TPKM3)<br>         <b>Fault Description:</b> between Taiwan and Matsu<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2025-01-15<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_5cb34a0f0622eeb79e4633d45a409139.setContent(html_e6ab84dffea90dd39dea831ca0387507);
+            
+        
+
+        circle_marker_fddaa34dd3bfd9e4c9b89da9c7ba3dd5.bindPopup(popup_5cb34a0f0622eeb79e4633d45a409139)
+        ;
+
+        
+    
+    
+            var circle_marker_9e470b18a09a109092bb095b50ebb137 = L.circleMarker(
+                [26.36108632539156, 121.94998784542422],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_ea6e245d03064b058d2286fa40add278 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_95c27e52f64ca9815bf3e5dc3d2b1e06 = $(`<div id="html_95c27e52f64ca9815bf3e5dc3d2b1e06" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Trans-Pacific Express (TPE) Cable System<br>         <b>Fault Description:</b> close to the port of Keelung on Taiwan’s north coast<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2025-01-03<br>         <b>Category:</b> Geopolitical     </div>`)[0];
+                popup_ea6e245d03064b058d2286fa40add278.setContent(html_95c27e52f64ca9815bf3e5dc3d2b1e06);
+            
+        
+
+        circle_marker_9e470b18a09a109092bb095b50ebb137.bindPopup(popup_ea6e245d03064b058d2286fa40add278)
+        ;
+
+        
+    
+    
+            var circle_marker_a593defcfa95286ec4368f395adc768a = L.circleMarker(
+                [25.957179978764344, 52.20003725694376],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_d6799835cfc487549f7a4e7aae5d5096 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3e032c588f89bc28ebf6840dfa508ae = $(`<div id="html_d3e032c588f89bc28ebf6840dfa508ae" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Africa Europe-1 (AAE-1)<br>         <b>Fault Description:</b> near Qatar<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2025-01-03<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_d6799835cfc487549f7a4e7aae5d5096.setContent(html_d3e032c588f89bc28ebf6840dfa508ae);
+            
+        
+
+        circle_marker_a593defcfa95286ec4368f395adc768a.bindPopup(popup_d6799835cfc487549f7a4e7aae5d5096)
+        ;
+
+        
+    
+    
+            var circle_marker_cbb5aab841e8d92f01c8fa44e9bdcb56 = L.circleMarker(
+                [1.454368851373345, 104.56885015838535],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_b90a2742bc55a62543efb5be58b1f566 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1b38b3435e6e042e54ce759bf76b05a9 = $(`<div id="html_1b38b3435e6e042e54ce759bf76b05a9" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Tata TGN-Intra Asia (TGN-IA)<br>         <b>Fault Description:</b> S1 branch between Vietnam and Singapore; 190km from Singapore CLS<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2024-12-26<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_b90a2742bc55a62543efb5be58b1f566.setContent(html_1b38b3435e6e042e54ce759bf76b05a9);
+            
+        
+
+        circle_marker_cbb5aab841e8d92f01c8fa44e9bdcb56.bindPopup(popup_b90a2742bc55a62543efb5be58b1f566)
+        ;
+
+        
+    
+    
+            var circle_marker_2292ad41323a9a8fcc2927bc098d2349 = L.circleMarker(
+                [59.79305890746809, 24.412556941855435],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_fe33eaf1a74cb682322907eb28fee6df = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a9b0a61c0aba752edf1eb71d9e59aee0 = $(`<div id="html_a9b0a61c0aba752edf1eb71d9e59aee0" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Baltic Sea Submarine Cable<br>         <b>Fault Description:</b> between Finland and Estonia in the Gulf of Finland<br>         <b>Region:</b> Europe<br>         <b>Date of Fault:</b> 2024-12-26<br>         <b>Category:</b> Geopolitical     </div>`)[0];
+                popup_fe33eaf1a74cb682322907eb28fee6df.setContent(html_a9b0a61c0aba752edf1eb71d9e59aee0);
+            
+        
+
+        circle_marker_2292ad41323a9a8fcc2927bc098d2349.bindPopup(popup_fe33eaf1a74cb682322907eb28fee6df)
+        ;
+
+        
+    
+    
+            var circle_marker_68833c9d6d59932385e80f25a606daa5 = L.circleMarker(
+                [7.187160551695455, 101.70000219070414],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_0d5f4a742eed2b51f8ac1bcdf19d5e35 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef4d22745bb185348b2167da4f1576b2 = $(`<div id="html_ef4d22745bb185348b2167da4f1576b2" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> S8 branch near Thailand<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2024-11-29<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_0d5f4a742eed2b51f8ac1bcdf19d5e35.setContent(html_ef4d22745bb185348b2167da4f1576b2);
+            
+        
+
+        circle_marker_68833c9d6d59932385e80f25a606daa5.bindPopup(popup_0d5f4a742eed2b51f8ac1bcdf19d5e35)
+        ;
+
+        
+    
+    
+            var circle_marker_345b94757237202f46b0ba17644b4aec = L.circleMarker(
+                [56.469711376547025, 19.125060687567377],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_627d80da8e65109b817572c0864aa57f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bb1efde31053fb2a0c0a5c6788e50b73 = $(`<div id="html_bb1efde31053fb2a0c0a5c6788e50b73" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> C-Lion1<br>         <b>Fault Description:</b> between Finland and Germany<br>         <b>Region:</b> Europe<br>         <b>Date of Fault:</b> 2024-11-18<br>         <b>Category:</b> Geopolitical     </div>`)[0];
+                popup_627d80da8e65109b817572c0864aa57f.setContent(html_bb1efde31053fb2a0c0a5c6788e50b73);
+            
+        
+
+        circle_marker_345b94757237202f46b0ba17644b4aec.bindPopup(popup_627d80da8e65109b817572c0864aa57f)
+        ;
+
+        
+    
+    
+            var circle_marker_3c2eb112c38af975f2988cc91b17a418 = L.circleMarker(
+                [16.213003862431094, 52.182457269397545],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_4fb512d7d095ccbd8125d3f049a59511 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f85907988abe2862a0af26d8f48d36f3 = $(`<div id="html_f85907988abe2862a0af26d8f48d36f3" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> FALCON<br>         <b>Fault Description:</b> between Kuwait and Al-Khobar, Saudi Arabia<br>         <b>Region:</b> Middle East<br>         <b>Date of Fault:</b> 2024-09-25<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_4fb512d7d095ccbd8125d3f049a59511.setContent(html_f85907988abe2862a0af26d8f48d36f3);
+            
+        
+
+        circle_marker_3c2eb112c38af975f2988cc91b17a418.bindPopup(popup_4fb512d7d095ccbd8125d3f049a59511)
+        ;
+
+        
+    
+    
+            var circle_marker_b09674a4440fc3649d826cec9ee4604f = L.circleMarker(
+                [57.734649479402336, -134.8591152291936],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_99fb0fe32f61f6f83a64776c0a6ef6d6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_21b9787f86f3da8fcfd0a2812a1e79d8 = $(`<div id="html_21b9787f86f3da8fcfd0a2812a1e79d8" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Alaska United East (AU-East)<br>         <b>Fault Description:</b> 30 miles off Sitka<br>         <b>Region:</b> Other<br>         <b>Date of Fault:</b> 2024-08-29<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_99fb0fe32f61f6f83a64776c0a6ef6d6.setContent(html_21b9787f86f3da8fcfd0a2812a1e79d8);
+            
+        
+
+        circle_marker_b09674a4440fc3649d826cec9ee4604f.bindPopup(popup_99fb0fe32f61f6f83a64776c0a6ef6d6)
+        ;
+
+        
+    
+    
+            var circle_marker_e0dac8c9dab3d38ccfb437a6a2efd045 = L.circleMarker(
+                [3.266814816815666, -3.824923054448695],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_0bf32fb4fa4e1e66867b4c0796006edb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61f9389bd8c5311294f70be9322920cb = $(`<div id="html_61f9389bd8c5311294f70be9322920cb" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Africa Coast to Europe (ACE)<br>         <b>Fault Description:</b> off Abidjan<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-08-21<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_0bf32fb4fa4e1e66867b4c0796006edb.setContent(html_61f9389bd8c5311294f70be9322920cb);
+            
+        
+
+        circle_marker_e0dac8c9dab3d38ccfb437a6a2efd045.bindPopup(popup_0bf32fb4fa4e1e66867b4c0796006edb)
+        ;
+
+        
+    
+    
+            var circle_marker_61d12c8ed6b213d68e6dda3d87823a5c = L.circleMarker(
+                [39.00237890905839, -10.349918432080775],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_bcaf07024561a38684c7627cf4ff3ca4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0a2691f5a17e8d1a5f8cdbfd0d01f32d = $(`<div id="html_0a2691f5a17e8d1a5f8cdbfd0d01f32d" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Africa Coast to Europe (ACE)<br>         <b>Fault Description:</b> off Lisbon<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-08-21<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_bcaf07024561a38684c7627cf4ff3ca4.setContent(html_0a2691f5a17e8d1a5f8cdbfd0d01f32d);
+            
+        
+
+        circle_marker_61d12c8ed6b213d68e6dda3d87823a5c.bindPopup(popup_bcaf07024561a38684c7627cf4ff3ca4)
+        ;
+
+        
+    
+    
+            var circle_marker_6460ff60c6fb9f2741507f03a4dcdbee = L.circleMarker(
+                [19.28295591266266, -81.16676076149955],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_75953b9c34417acbf849249f655964a5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11e162af1d36f00936b48e43a5b47bea = $(`<div id="html_11e162af1d36f00936b48e43a5b47bea" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Maya-1<br>         <b>Fault Description:</b> between Isla Mujeres and Cozumel<br>         <b>Region:</b> Latin America<br>         <b>Date of Fault:</b> 2024-06-21<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_75953b9c34417acbf849249f655964a5.setContent(html_11e162af1d36f00936b48e43a5b47bea);
+            
+        
+
+        circle_marker_6460ff60c6fb9f2741507f03a4dcdbee.bindPopup(popup_75953b9c34417acbf849249f655964a5)
+        ;
+
+        
+    
+    
+            var circle_marker_0f333b3d95e975a2ca3fb633fef8a300 = L.circleMarker(
+                [22.884654113882444, -17.0999136503208],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_4b248186771958747e92ee9ae7ca91cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3ee9851eb35f2c5d459343fe47015e3d = $(`<div id="html_3ee9851eb35f2c5d459343fe47015e3d" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Africa Coast to Europe (ACE)<br>         <b>Fault Description:</b> off Dakhla (MA Western Sahara) Seg 1-7, between BU-1C and BU-1D<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-06-07<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_4b248186771958747e92ee9ae7ca91cf.setContent(html_3ee9851eb35f2c5d459343fe47015e3d);
+            
+        
+
+        circle_marker_0f333b3d95e975a2ca3fb633fef8a300.bindPopup(popup_4b248186771958747e92ee9ae7ca91cf)
+        ;
+
+        
+    
+    
+            var circle_marker_a6bd254b2009423b858c276b86644b14 = L.circleMarker(
+                [1.468426767331968, 51.30003789451161],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_62962591572787b7939adfed17a98d16 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_acb594c9d57a57d842c4dcfc6ef67199 = $(`<div id="html_acb594c9d57a57d842c4dcfc6ef67199" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Eastern Africa Submarine System (EASSy)<br>         <b>Fault Description:</b> between South Africa and Mozambique<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-05-12<br>         <b>Category:</b> Geopolitical     </div>`)[0];
+                popup_62962591572787b7939adfed17a98d16.setContent(html_acb594c9d57a57d842c4dcfc6ef67199);
+            
+        
+
+        circle_marker_a6bd254b2009423b858c276b86644b14.bindPopup(popup_62962591572787b7939adfed17a98d16)
+        ;
+
+        
+    
+    
+            var circle_marker_488b5196e874ef6a5aea045fb745d833 = L.circleMarker(
+                [19.07607425728523, 72.87590260996693],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_042583d548b90854a3a67fbe0c245b9f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ba6721939fd8e7adc9e8f5db992357dc = $(`<div id="html_ba6721939fd8e7adc9e8f5db992357dc" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SEACOM/Tata TGN-Eurasia<br>         <b>Fault Description:</b> between South Africa and Mozambique<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-05-12<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_042583d548b90854a3a67fbe0c245b9f.setContent(html_ba6721939fd8e7adc9e8f5db992357dc);
+            
+        
+
+        circle_marker_488b5196e874ef6a5aea045fb745d833.bindPopup(popup_042583d548b90854a3a67fbe0c245b9f)
+        ;
+
+        
+    
+    
+            var circle_marker_c909e4aee8cb620122ec4a3fcbbcab94 = L.circleMarker(
+                [5.510071711803246, 81.00001685476798],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_67eb0cba3db95a40efa671393b9f2cd1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_753a954aa35fa9559ac59528d5423253 = $(`<div id="html_753a954aa35fa9559ac59528d5423253" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SeaMeWe-5<br>         <b>Fault Description:</b> in the straits of Mallaca, 440km from Singapore<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2024-04-19<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_67eb0cba3db95a40efa671393b9f2cd1.setContent(html_753a954aa35fa9559ac59528d5423253);
+            
+        
+
+        circle_marker_c909e4aee8cb620122ec4a3fcbbcab94.bindPopup(popup_67eb0cba3db95a40efa671393b9f2cd1)
+        ;
+
+        
+    
+    
+            var circle_marker_2ef4b8332997895fae5af20492260386 = L.circleMarker(
+                [3.266814816815666, -3.937422974752714],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_c2e10c0214160eaca6b8c44e8378ed0b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d7828ab2878d600e46c705828c66f5a7 = $(`<div id="html_d7828ab2878d600e46c705828c66f5a7" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SAT-3/WASC<br>         <b>Fault Description:</b> off the coast of Côte d'Ivoire<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-03-14<br>         <b>Category:</b> Environmental     </div>`)[0];
+                popup_c2e10c0214160eaca6b8c44e8378ed0b.setContent(html_d7828ab2878d600e46c705828c66f5a7);
+            
+        
+
+        circle_marker_2ef4b8332997895fae5af20492260386.bindPopup(popup_c2e10c0214160eaca6b8c44e8378ed0b)
+        ;
+
+        
+    
+    
+            var circle_marker_4f623882f7370c5f835277294ed9d26c = L.circleMarker(
+                [3.266814816815666, -4.049922895056732],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_1ac9f61389f36229654e2c03ac96af45 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_66c4dc20b1aadec47a651716ca61c8a6 = $(`<div id="html_66c4dc20b1aadec47a651716ca61c8a6" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> MainOne<br>         <b>Fault Description:</b> off the coast of Côte d'Ivoire<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-03-14<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_1ac9f61389f36229654e2c03ac96af45.setContent(html_66c4dc20b1aadec47a651716ca61c8a6);
+            
+        
+
+        circle_marker_4f623882f7370c5f835277294ed9d26c.bindPopup(popup_1ac9f61389f36229654e2c03ac96af45)
+        ;
+
+        
+    
+    
+            var circle_marker_9a27d6eaafd913d98aa32b18278db2b7 = L.circleMarker(
+                [3.266814816815666, -3.824923054448695],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_842fbfdb0820a2ca781b26d7009f0f2f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a5bb4c0db033d5c86e57a76cc45eccf7 = $(`<div id="html_a5bb4c0db033d5c86e57a76cc45eccf7" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Africa Coast to Europe (ACE)<br>         <b>Fault Description:</b> off the coast of Côte d'Ivoire<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-03-14<br>         <b>Category:</b> Environmental     </div>`)[0];
+                popup_842fbfdb0820a2ca781b26d7009f0f2f.setContent(html_a5bb4c0db033d5c86e57a76cc45eccf7);
+            
+        
+
+        circle_marker_9a27d6eaafd913d98aa32b18278db2b7.bindPopup(popup_842fbfdb0820a2ca781b26d7009f0f2f)
+        ;
+
+        
+    
+    
+            var circle_marker_fea50d0394a926fd45e465fe4773e876 = L.circleMarker(
+                [3.266814816815666, -4.162422815360751],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_9e4aa83cea9f1112cf25640c1b4aee9d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7a721053039f957c3b73761fba0a1855 = $(`<div id="html_7a721053039f957c3b73761fba0a1855" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> West Africa Cable System (WACS)<br>         <b>Fault Description:</b> off the coast of Côte d'Ivoire<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-03-14<br>         <b>Category:</b> Environmental     </div>`)[0];
+                popup_9e4aa83cea9f1112cf25640c1b4aee9d.setContent(html_7a721053039f957c3b73761fba0a1855);
+            
+        
+
+        circle_marker_fea50d0394a926fd45e465fe4773e876.bindPopup(popup_9e4aa83cea9f1112cf25640c1b4aee9d)
+        ;
+
+        
+    
+    
+            var circle_marker_8e6614cfd899dba666e06c0bc6b1a0ff = L.circleMarker(
+                [19.210675111642853, 70.20002450558383],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_601395159548911dfbe08ae2542870b5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d2ef3142165a7c85ff77741197a1a5a0 = $(`<div id="html_d2ef3142165a7c85ff77741197a1a5a0" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SEACOM/Tata TGN-Eurasia<br>         <b>Fault Description:</b> between Kenya and Egypt<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2024-02-24<br>         <b>Category:</b> Geopolitical     </div>`)[0];
+                popup_601395159548911dfbe08ae2542870b5.setContent(html_d2ef3142165a7c85ff77741197a1a5a0);
+            
+        
+
+        circle_marker_8e6614cfd899dba666e06c0bc6b1a0ff.bindPopup(popup_601395159548911dfbe08ae2542870b5)
+        ;
+
+        
+    
+    
+            var circle_marker_93297dad0776ac124d665dd7ab7ae1a1 = L.circleMarker(
+                [22.469443964829516, 61.20003088126379],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_82c569a2f9324d5b2fcdfbdc16cbfbd2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_03bd78efc8dff207854ce9e8f4ec22e4 = $(`<div id="html_03bd78efc8dff207854ce9e8f4ec22e4" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Africa Europe-1 (AAE-1)<br>         <b>Fault Description:</b> between Jeddah in Saudi Arabia and Djibouti in East Africa<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2024-02-15<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_82c569a2f9324d5b2fcdfbdc16cbfbd2.setContent(html_03bd78efc8dff207854ce9e8f4ec22e4);
+            
+        
+
+        circle_marker_93297dad0776ac124d665dd7ab7ae1a1.bindPopup(popup_82c569a2f9324d5b2fcdfbdc16cbfbd2)
+        ;
+
+        
+    
+    
+            var circle_marker_466da600ff85a467e537dec738edd620 = L.circleMarker(
+                [16.534196198259725, 41.4000449077607],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_e21f085ef5e77e43a2b48450a442aa67 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df07109b9ca2024b82a6a4e6ba08f144 = $(`<div id="html_df07109b9ca2024b82a6a4e6ba08f144" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Europe India Gateway (EIG)<br>         <b>Fault Description:</b> between Jeddah in Saudi Arabia and Djibouti in East Africa<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2024-02-15<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_e21f085ef5e77e43a2b48450a442aa67.setContent(html_df07109b9ca2024b82a6a4e6ba08f144);
+            
+        
+
+        circle_marker_466da600ff85a467e537dec738edd620.bindPopup(popup_e21f085ef5e77e43a2b48450a442aa67)
+        ;
+
+        
+    
+    
+            var circle_marker_a5fbb02b4f88776b89dd08ef8a092c0d = L.circleMarker(
+                [55.07780072164767, -10.799918113296759],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_1a658f34bd8a90c2a733d40eb8c9269f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a2ee723b61b4c1ebd44e5a4d06d7ea70 = $(`<div id="html_a2ee723b61b4c1ebd44e5a4d06d7ea70" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> AEC-1<br>         <b>Fault Description:</b> off Belmullet, county Mayo (Ireland)<br>         <b>Region:</b> Trans-Atlantic<br>         <b>Date of Fault:</b> 2023-11-16<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_1a658f34bd8a90c2a733d40eb8c9269f.setContent(html_a2ee723b61b4c1ebd44e5a4d06d7ea70);
+            
+        
+
+        circle_marker_a5fbb02b4f88776b89dd08ef8a092c0d.bindPopup(popup_1a658f34bd8a90c2a733d40eb8c9269f)
+        ;
+
+        
+    
+    
+            var circle_marker_c3a4bc0f5f26d2b15bb2fcde03e51ba6 = L.circleMarker(
+                [52.96339810559356, 154.79996457419256],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_496eb659fbd842f7bdedb88fe720866d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_04bb901d41e8761fe08ff47a50781900 = $(`<div id="html_04bb901d41e8761fe08ff47a50781900" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Far East Submarine Cable System<br>         <b>Fault Description:</b> near Ust'-Bol'sheretsk<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2023-11-15<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_496eb659fbd842f7bdedb88fe720866d.setContent(html_04bb901d41e8761fe08ff47a50781900);
+            
+        
+
+        circle_marker_c3a4bc0f5f26d2b15bb2fcde03e51ba6.bindPopup(popup_496eb659fbd842f7bdedb88fe720866d)
+        ;
+
+        
+    
+    
+            var circle_marker_9348c7f1e0b541befa47322c692dea17 = L.circleMarker(
+                [59.79305890746809, 24.412556941855435],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_3cdb532bbabf7bee003c7bd2c4dead7b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6bf0b65d333d27b391ada0f79f0f22f4 = $(`<div id="html_6bf0b65d333d27b391ada0f79f0f22f4" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Baltic Sea Submarine Cable<br>         <b>Fault Description:</b> happened at a similar time and in physical proximity ... to the damage that was previously reported to a gas pipeline between Estonia and Finland and a telecommunications cable between Estonia and Finland'<br>         <b>Region:</b> Europe<br>         <b>Date of Fault:</b> 2023-10-08<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_3cdb532bbabf7bee003c7bd2c4dead7b.setContent(html_6bf0b65d333d27b391ada0f79f0f22f4);
+            
+        
+
+        circle_marker_9348c7f1e0b541befa47322c692dea17.bindPopup(popup_3cdb532bbabf7bee003c7bd2c4dead7b)
+        ;
+
+        
+    
+    
+            var circle_marker_e457c4839494ac1558009184aa96f101 = L.circleMarker(
+                [-23.803113122349238, -42.29989579841706],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_6a2088cd9a2541cab332f8771fcc6bcc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19982f22173932bb53c651d420f7702d = $(`<div id="html_19982f22173932bb53c651d420f7702d" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> South American Crossing (SAC)<br>         <b>Fault Description:</b> off the coast of Rio de Janeiro<br>         <b>Region:</b> Latin America<br>         <b>Date of Fault:</b> 2023-09-11<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_6a2088cd9a2541cab332f8771fcc6bcc.setContent(html_19982f22173932bb53c651d420f7702d);
+            
+        
+
+        circle_marker_e457c4839494ac1558009184aa96f101.bindPopup(popup_6a2088cd9a2541cab332f8771fcc6bcc)
+        ;
+
+        
+    
+    
+            var circle_marker_41651afbda34c446200fdee8044fae67 = L.circleMarker(
+                [5.061986954416114, 1.800072960751236],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_4edd943a1524b98d4607143c1a5f59bc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f2b0d25bd046c742adcd18125ec85858 = $(`<div id="html_f2b0d25bd046c742adcd18125ec85858" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Africa Coast to Europe (ACE)<br>         <b>Fault Description:</b> near Tema<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2023-06-29<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_4edd943a1524b98d4607143c1a5f59bc.setContent(html_f2b0d25bd046c742adcd18125ec85858);
+            
+        
+
+        circle_marker_41651afbda34c446200fdee8044fae67.bindPopup(popup_4edd943a1524b98d4607143c1a5f59bc)
+        ;
+
+        
+    
+    
+            var circle_marker_d12685b94dafd6c7e4796b2f57b6b45a = L.circleMarker(
+                [-6.708991470564002, 156.3958618811439],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_17187fc5a2a49c8152cebd6c72e4d31b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9210fbaf14d740098d2b925cb31eef16 = $(`<div id="html_9210fbaf14d740098d2b925cb31eef16" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Coral Sea Cable System (CS²)<br>         <b>Fault Description:</b> close to the Port of Honiara<br>         <b>Region:</b> Oceania<br>         <b>Date of Fault:</b> 2023-05-10<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_17187fc5a2a49c8152cebd6c72e4d31b.setContent(html_9210fbaf14d740098d2b925cb31eef16);
+            
+        
+
+        circle_marker_d12685b94dafd6c7e4796b2f57b6b45a.bindPopup(popup_17187fc5a2a49c8152cebd6c72e4d31b)
+        ;
+
+        
+    
+    
+            var circle_marker_874b571d615b414af80a1574c483b967 = L.circleMarker(
+                [3.940475772228814, 103.95000059678415],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_52746446de07f38661e0a2d6564eb5ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_57dac8b064646b05ba18b8dce62449ca = $(`<div id="html_57dac8b064646b05ba18b8dce62449ca" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> S7 branch, 206km from Da Nang<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2023-04-22<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_52746446de07f38661e0a2d6564eb5ef.setContent(html_57dac8b064646b05ba18b8dce62449ca);
+            
+        
+
+        circle_marker_874b571d615b414af80a1574c483b967.bindPopup(popup_52746446de07f38661e0a2d6564eb5ef)
+        ;
+
+        
+    
+    
+            var circle_marker_2651c5c429c9c9e0cd504e0b7eee8c9c = L.circleMarker(
+                [-4.77878776891936, 11.863635831629022],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_aceef470fb73afcf5335c2764202de31 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_041193b957e8ebaad3acde103ce40e80 = $(`<div id="html_041193b957e8ebaad3acde103ce40e80" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> West Africa Cable System (WACS)<br>         <b>Fault Description:</b> 100km from the coast of the MATOMBI station in Pointe-Noire<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2023-03-31<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_aceef470fb73afcf5335c2764202de31.setContent(html_041193b957e8ebaad3acde103ce40e80);
+            
+        
+
+        circle_marker_2651c5c429c9c9e0cd504e0b7eee8c9c.bindPopup(popup_aceef470fb73afcf5335c2764202de31)
+        ;
+
+        
+    
+    
+            var circle_marker_5fe2554c0b788a583f9893be4bde2328 = L.circleMarker(
+                [-12.96997203534297, -38.50448848711925],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_f7bfa5af8b098008603fce92e0e5db0e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cdf24a4a13e40f62f65ca4a202884422 = $(`<div id="html_cdf24a4a13e40f62f65ca4a202884422" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> South America-1 (SAm-1)<br>         <b>Fault Description:</b> 30km off the coast of Bahia<br>         <b>Region:</b> Latin America<br>         <b>Date of Fault:</b> 2023-03-04<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_f7bfa5af8b098008603fce92e0e5db0e.setContent(html_cdf24a4a13e40f62f65ca4a202884422);
+            
+        
+
+        circle_marker_5fe2554c0b788a583f9893be4bde2328.bindPopup(popup_f7bfa5af8b098008603fce92e0e5db0e)
+        ;
+
+        
+    
+    
+            var circle_marker_f20efa51b6355c868954b3f5cb70e32a = L.circleMarker(
+                [1.454368851373345, 104.56885015838535],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_0a5c5f82a7ae4f16e3b6698914711e6b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_db47c332507b4aa65a85b75d012a3c45 = $(`<div id="html_db47c332507b4aa65a85b75d012a3c45" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Tata TGN-Intra Asia (TGN-IA)<br>         <b>Fault Description:</b> about 130 km from a landing station in Singapore<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2023-01-28<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_0a5c5f82a7ae4f16e3b6698914711e6b.setContent(html_db47c332507b4aa65a85b75d012a3c45);
+            
+        
+
+        circle_marker_f20efa51b6355c868954b3f5cb70e32a.bindPopup(popup_0a5c5f82a7ae4f16e3b6698914711e6b)
+        ;
+
+        
+    
+    
+            var circle_marker_affd0779d1079ccb7cc68e4d506f239f = L.circleMarker(
+                [20.796306105108872, 113.84999358353615],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_050aa98e0d3bb8c0ce04f3f39e8f501a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_066ac30a591bfd2829caceefde66712d = $(`<div id="html_066ac30a591bfd2829caceefde66712d" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> S6 branch, off Hong Kong landing station<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2022-12-26<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_050aa98e0d3bb8c0ce04f3f39e8f501a.setContent(html_066ac30a591bfd2829caceefde66712d);
+            
+        
+
+        circle_marker_affd0779d1079ccb7cc68e4d506f239f.bindPopup(popup_050aa98e0d3bb8c0ce04f3f39e8f501a)
+        ;
+
+        
+    
+    
+            var circle_marker_b163f8ab102c669f576212af8cd70d9e = L.circleMarker(
+                [43.29362778902908, 5.372530429989069],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_ec552c90c995c2573dff1a994b6c6396 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7f78c654257b99fbfa3ac21da2f4b40e = $(`<div id="html_7f78c654257b99fbfa3ac21da2f4b40e" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Africa Europe-1 (AAE-1)<br>         <b>Fault Description:</b> S1H.1, 3km from Aguilar station<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2022-11-30<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_ec552c90c995c2573dff1a994b6c6396.setContent(html_7f78c654257b99fbfa3ac21da2f4b40e);
+            
+        
+
+        circle_marker_b163f8ab102c669f576212af8cd70d9e.bindPopup(popup_ec552c90c995c2573dff1a994b6c6396)
+        ;
+
+        
+    
+    
+            var circle_marker_5c5127d1387427cc800adae888bec979 = L.circleMarker(
+                [34.683017659857974, 16.65006244087933],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_1fb6382e50cb10ab8160da40f3ebf933 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_248a0348de3d6ea1fcf19ca32e0e8871 = $(`<div id="html_248a0348de3d6ea1fcf19ca32e0e8871" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> IMEWE<br>         <b>Fault Description:</b> between Alexandria and Marseille<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2022-09-12<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_1fb6382e50cb10ab8160da40f3ebf933.setContent(html_248a0348de3d6ea1fcf19ca32e0e8871);
+            
+        
+
+        circle_marker_5c5127d1387427cc800adae888bec979.bindPopup(popup_1fb6382e50cb10ab8160da40f3ebf933)
+        ;
+
+        
+    
+    
+            var circle_marker_ca10b43158e8cb769245713411c820d5 = L.circleMarker(
+                [28.161052262220792, 33.46910052611805],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_ce8ca59c3635177ba50d3a25e73d2d30 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef6bd3cc8d0493af2b5942874caebddc = $(`<div id="html_ef6bd3cc8d0493af2b5942874caebddc" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SeaMeWe-5<br>         <b>Fault Description:</b> at the junction of the Suez Canal and the Mediterranean Sea near Egypt<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2022-08-11<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_ce8ca59c3635177ba50d3a25e73d2d30.setContent(html_ef6bd3cc8d0493af2b5942874caebddc);
+            
+        
+
+        circle_marker_ca10b43158e8cb769245713411c820d5.bindPopup(popup_ce8ca59c3635177ba50d3a25e73d2d30)
+        ;
+
+        
+    
+    
+            var circle_marker_f9b4048a9dcf834d736cd18f109f19f7 = L.circleMarker(
+                [29.540507745394493, 125.54998529515227],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_38f1ce7169346972102012ab30a78766 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_039632633de5816ccad6a21ae2cc2656 = $(`<div id="html_039632633de5816ccad6a21ae2cc2656" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> S3 branch, 427km from China<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2022-07-26<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_38f1ce7169346972102012ab30a78766.setContent(html_039632633de5816ccad6a21ae2cc2656);
+            
+        
+
+        circle_marker_f9b4048a9dcf834d736cd18f109f19f7.bindPopup(popup_38f1ce7169346972102012ab30a78766)
+        ;
+
+        
+    
+    
+            var circle_marker_6a78a122eb58b8530b0a5b08593cf65e = L.circleMarker(
+                [20.796306105108872, 113.51249382262418],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_28897193e9239e972b3bf9321348325c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_94626c8bdac2a182fbe4493f64478341 = $(`<div id="html_94626c8bdac2a182fbe4493f64478341" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> S1H and S1I segments (near Hong Kong)<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2022-06-30<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_28897193e9239e972b3bf9321348325c.setContent(html_94626c8bdac2a182fbe4493f64478341);
+            
+        
+
+        circle_marker_6a78a122eb58b8530b0a5b08593cf65e.bindPopup(popup_28897193e9239e972b3bf9321348325c)
+        ;
+
+        
+    
+    
+            var circle_marker_12a5b00787ec75c56a2e1dcff802d940 = L.circleMarker(
+                [-8.499084023854886, 140.4050547716818],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_9ed88bdb3e4df1d7f692a2130e2a6baa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6731f4f455d95bb684cf69f102f227e2 = $(`<div id="html_6731f4f455d95bb684cf69f102f227e2" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SMPCS Packet-2<br>         <b>Fault Description:</b> 289km from the Merauke landing station<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2022-03-27<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_9ed88bdb3e4df1d7f692a2130e2a6baa.setContent(html_6731f4f455d95bb684cf69f102f227e2);
+            
+        
+
+        circle_marker_12a5b00787ec75c56a2e1dcff802d940.bindPopup(popup_9ed88bdb3e4df1d7f692a2130e2a6baa)
+        ;
+
+        
+    
+    
+            var circle_marker_af9beedf9b4f78e01a4c0dc3b7328308 = L.circleMarker(
+                [24.889731701235817, 67.02854675228855],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_ee78420dad3c4b353052df57c9f7cc31 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bfa5bb11dc03707ccc9309f8b127f1ee = $(`<div id="html_bfa5bb11dc03707ccc9309f8b127f1ee" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Transworld (TW1)<br>         <b>Fault Description:</b> 40km from Karachi<br>         <b>Region:</b> Middle East<br>         <b>Date of Fault:</b> 2022-02-21<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_ee78420dad3c4b353052df57c9f7cc31.setContent(html_bfa5bb11dc03707ccc9309f8b127f1ee);
+            
+        
+
+        circle_marker_af9beedf9b4f78e01a4c0dc3b7328308.bindPopup(popup_ee78420dad3c4b353052df57c9f7cc31)
+        ;
+
+        
+    
+    
+            var circle_marker_b14e18e04a049fe3291f70828b4fcb50 = L.circleMarker(
+                [12.72515592356304, 45.450042038703735],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_f4bb80d5aab4ac2558b763d4f79bfe56 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_18359733562ff409ec9911f0cd1fcc42 = $(`<div id="html_18359733562ff409ec9911f0cd1fcc42" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> FALCON<br>         <b>Fault Description:</b> between Al Faw (Iraq) and Bandar Abbas (Iran)<br>         <b>Region:</b> Middle East<br>         <b>Date of Fault:</b> 2022-01-20<br>         <b>Category:</b> Geopolitical     </div>`)[0];
+                popup_f4bb80d5aab4ac2558b763d4f79bfe56.setContent(html_18359733562ff409ec9911f0cd1fcc42);
+            
+        
+
+        circle_marker_b14e18e04a049fe3291f70828b4fcb50.bindPopup(popup_f4bb80d5aab4ac2558b763d4f79bfe56)
+        ;
+
+        
+    
+    
+            var circle_marker_6f4fc3b473c83c1065a4560d9fba13c0 = L.circleMarker(
+                [-21.133465659292966, -175.20000165073512],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_7e4d01395190916b9b76929371d1bf14 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_17852cdf3fda2ab9c5257c936277ce9a = $(`<div id="html_17852cdf3fda2ab9c5257c936277ce9a" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Tonga Domestic Cable Extension (TDCE)<br>         <b>Fault Description:</b> 47kms off Nuku’alofa<br>         <b>Region:</b> Oceania<br>         <b>Date of Fault:</b> 2022-01-16<br>         <b>Category:</b> Environmental     </div>`)[0];
+                popup_7e4d01395190916b9b76929371d1bf14.setContent(html_17852cdf3fda2ab9c5257c936277ce9a);
+            
+        
+
+        circle_marker_6f4fc3b473c83c1065a4560d9fba13c0.bindPopup(popup_7e4d01395190916b9b76929371d1bf14)
+        ;
+
+        
+    
+    
+            var circle_marker_2327304d3586d227cb2dbc5006f8b58e = L.circleMarker(
+                [-21.133465659292966, -175.20000165073512],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_12afd951a8179a8e8a8f2b50bc531824 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9f4f9ad6922da2a2b85abe2f51766dc6 = $(`<div id="html_9f4f9ad6922da2a2b85abe2f51766dc6" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Tonga Cable<br>         <b>Fault Description:</b> 37kms off Nuku’alofa<br>         <b>Region:</b> Oceania<br>         <b>Date of Fault:</b> 2022-01-16<br>         <b>Category:</b> Environmental     </div>`)[0];
+                popup_12afd951a8179a8e8a8f2b50bc531824.setContent(html_9f4f9ad6922da2a2b85abe2f51766dc6);
+            
+        
+
+        circle_marker_2327304d3586d227cb2dbc5006f8b58e.bindPopup(popup_12afd951a8179a8e8a8f2b50bc531824)
+        ;
+
+        
+    
+    
+            var circle_marker_180e09aa40b0bbc87ede1e7830ceb9f6 = L.circleMarker(
+                [78.03993864842269, 12.600065309935387],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_f61e631daa628642eba3c954334030aa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_009b49bbfabf2d5123a78fd36339f6c2 = $(`<div id="html_009b49bbfabf2d5123a78fd36339f6c2" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Svalbard Undersea Cable System<br>         <b>Fault Description:</b> between 130km-230km from Longyearbyen<br>         <b>Region:</b> Europe<br>         <b>Date of Fault:</b> 2022-01-07<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_f61e631daa628642eba3c954334030aa.setContent(html_009b49bbfabf2d5123a78fd36339f6c2);
+            
+        
+
+        circle_marker_180e09aa40b0bbc87ede1e7830ceb9f6.bindPopup(popup_f61e631daa628642eba3c954334030aa)
+        ;
+
+        
+    
+    
+            var circle_marker_e251259e845d798ae2663f7127d058e8 = L.circleMarker(
+                [13.92930384327183, -17.54991333213278],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_aef96ab3ecae7e2a90440091a14a30db = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7750cc635f8cd6fdfe9a6185e7d92576 = $(`<div id="html_7750cc635f8cd6fdfe9a6185e7d92576" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Africa Coast to Europe (ACE)<br>         <b>Fault Description:</b> off the coast of Gambia<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2022-01-04<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_aef96ab3ecae7e2a90440091a14a30db.setContent(html_7750cc635f8cd6fdfe9a6185e7d92576);
+            
+        
+
+        circle_marker_e251259e845d798ae2663f7127d058e8.bindPopup(popup_aef96ab3ecae7e2a90440091a14a30db)
+        ;
+
+        
+    
+    
+            var circle_marker_8d65343ffa44ca4750aa6a01ea5ac305 = L.circleMarker(
+                [23.298598065875897, 66.60002705585578],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_da81ac0bfacdef2c64b3cad80560e3a8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a7857061c6e9a2b146d79f707e2d95d4 = $(`<div id="html_a7857061c6e9a2b146d79f707e2d95d4" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SeaMeWe-4<br>         <b>Fault Description:</b> near Karachi<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2021-12-21<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_da81ac0bfacdef2c64b3cad80560e3a8.setContent(html_a7857061c6e9a2b146d79f707e2d95d4);
+            
+        
+
+        circle_marker_8d65343ffa44ca4750aa6a01ea5ac305.bindPopup(popup_da81ac0bfacdef2c64b3cad80560e3a8)
+        ;
+
+        
+    
+    
+            var circle_marker_4c69cbdce27695bea54f2e963a1647f8 = L.circleMarker(
+                [22.31829267897149, 114.2586832940168],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_9097166cfabf65234cc767e1cab0fe7c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d5183cdf1b524c24bb036899b8f531bd = $(`<div id="html_d5183cdf1b524c24bb036899b8f531bd" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> 125km from Hong Kong CLS<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2021-12-13<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_9097166cfabf65234cc767e1cab0fe7c.setContent(html_d5183cdf1b524c24bb036899b8f531bd);
+            
+        
+
+        circle_marker_4c69cbdce27695bea54f2e963a1647f8.bindPopup(popup_9097166cfabf65234cc767e1cab0fe7c)
+        ;
+
+        
+    
+    
+            var circle_marker_9214f755f54f7c24eabb2b1973c79079 = L.circleMarker(
+                [5.061986954416114, 106.64999868408005],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_64cfba5e83c7f5a7c149492a8e90d333 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f096e3c2fdf2ae3ba69531327b42374d = $(`<div id="html_f096e3c2fdf2ae3ba69531327b42374d" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> branch between Vietnam and Singapore<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2021-10-31<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_64cfba5e83c7f5a7c149492a8e90d333.setContent(html_f096e3c2fdf2ae3ba69531327b42374d);
+            
+        
+
+        circle_marker_9214f755f54f7c24eabb2b1973c79079.bindPopup(popup_64cfba5e83c7f5a7c149492a8e90d333)
+        ;
+
+        
+    
+    
+            var circle_marker_1cd03d6b77c76b04260783266413d5f1 = L.circleMarker(
+                [12.615395567393394, 111.14999549624025],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_b0c595e648230b07019526ab9f4b9a92 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cea8d82af216ab46e437a9edd3b3d5bf = $(`<div id="html_cea8d82af216ab46e437a9edd3b3d5bf" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> S1I branch between Vietnam and Hong Kong<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2022-12-27<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_b0c595e648230b07019526ab9f4b9a92.setContent(html_cea8d82af216ab46e437a9edd3b3d5bf);
+            
+        
+
+        circle_marker_1cd03d6b77c76b04260783266413d5f1.bindPopup(popup_b0c595e648230b07019526ab9f4b9a92)
+        ;
+
+        
+    
+    
+            var circle_marker_75453fcdb8d8daa3380088cc657bcca8 = L.circleMarker(
+                [26.1593079707739, 56.98128386986378],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_59c34bad735be3da99b0cd8e51d75fd4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8e97b4b164430cc2685d469bc889cff8 = $(`<div id="html_8e97b4b164430cc2685d469bc889cff8" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Africa Europe-1 (AAE-1)<br>         <b>Fault Description:</b> near Fujairah, UAE<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2021-10-11<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_59c34bad735be3da99b0cd8e51d75fd4.setContent(html_8e97b4b164430cc2685d469bc889cff8);
+            
+        
+
+        circle_marker_75453fcdb8d8daa3380088cc657bcca8.bindPopup(popup_59c34bad735be3da99b0cd8e51d75fd4)
+        ;
+
+        
+    
+    
+            var circle_marker_d10988aaf71e215129034e50c86a8c0e = L.circleMarker(
+                [20.375041253465433, 38.36254705955156],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_3439183b7ab10b2f4414b5366b78b8ca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_289d8f35e064e5be1cb693770b07ae2d = $(`<div id="html_289d8f35e064e5be1cb693770b07ae2d" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Africa Europe-1 (AAE-1)<br>         <b>Fault Description:</b> S1H.3 segment between Vietnam and Singapore<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2021-09-04<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_3439183b7ab10b2f4414b5366b78b8ca.setContent(html_289d8f35e064e5be1cb693770b07ae2d);
+            
+        
+
+        circle_marker_d10988aaf71e215129034e50c86a8c0e.bindPopup(popup_3439183b7ab10b2f4414b5366b78b8ca)
+        ;
+
+        
+    
+    
+            var circle_marker_3c311c1648af32e21806346717d0c433 = L.circleMarker(
+                [-30.890946871471986, 113.84999358353615],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_bf8a99b391cf4d60f7e8ead611556c0c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c4b3b0f035706ccd3c25487e40314b43 = $(`<div id="html_c4b3b0f035706ccd3c25487e40314b43" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Australia-Singapore Cable (ASC)<br>         <b>Fault Description:</b> Off Perth<br>         <b>Region:</b> Oceania<br>         <b>Date of Fault:</b> 2021-08-01<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_bf8a99b391cf4d60f7e8ead611556c0c.setContent(html_c4b3b0f035706ccd3c25487e40314b43);
+            
+        
+
+        circle_marker_3c311c1648af32e21806346717d0c433.bindPopup(popup_bf8a99b391cf4d60f7e8ead611556c0c)
+        ;
+
+        
+    
+    
+            var circle_marker_a610274d94a3fe5204a00adc2267b827 = L.circleMarker(
+                [9.746236973759974, 107.77499788712005],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_fb2c928ae47841edc2d5b6d33e39909c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_003bc9ff256c87f552d422c9a6ba0424 = $(`<div id="html_003bc9ff256c87f552d422c9a6ba0424" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> Off Vung Tau,Vietnam<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2021-06-22<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_fb2c928ae47841edc2d5b6d33e39909c.setContent(html_003bc9ff256c87f552d422c9a6ba0424);
+            
+        
+
+        circle_marker_a610274d94a3fe5204a00adc2267b827.bindPopup(popup_fb2c928ae47841edc2d5b6d33e39909c)
+        ;
+
+        
+    
+    
+            var circle_marker_9e560d65eb0af15dad7ca09042740ef3 = L.circleMarker(
+                [9.746236973759974, 108.6749972495522],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_95587a99cf0b9405f11317b65e6b7405 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_46a193dbc50ff27925393fe3b7f3f8be = $(`<div id="html_46a193dbc50ff27925393fe3b7f3f8be" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Africa Europe-1 (AAE-1)<br>         <b>Fault Description:</b> Off Vietnam<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2021-05-25<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_95587a99cf0b9405f11317b65e6b7405.setContent(html_46a193dbc50ff27925393fe3b7f3f8be);
+            
+        
+
+        circle_marker_9e560d65eb0af15dad7ca09042740ef3.bindPopup(popup_95587a99cf0b9405f11317b65e6b7405)
+        ;
+
+        
+    
+    
+            var circle_marker_7b0ca26a96477e4e5c09d86580a11ddf = L.circleMarker(
+                [-2.175227145407149, 139.35329551675807],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_fb04f1b7ab5de41809a8b27404d8c3c8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef9ed5d4a69563ee0d5b143ead236fa5 = $(`<div id="html_ef9ed5d4a69563ee0d5b143ead236fa5" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SMPCS Packet-2<br>         <b>Fault Description:</b> Off Jayapura, Indonesia<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2021-04-30<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_fb04f1b7ab5de41809a8b27404d8c3c8.setContent(html_ef9ed5d4a69563ee0d5b143ead236fa5);
+            
+        
+
+        circle_marker_7b0ca26a96477e4e5c09d86580a11ddf.bindPopup(popup_fb04f1b7ab5de41809a8b27404d8c3c8)
+        ;
+
+        
+    
+    
+            var circle_marker_d4515c1082411246a0a249c07c7a3d42 = L.circleMarker(
+                [28.161052262220792, 123.74998657028833],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_b4424ff31782766c7c1078f9fd46530c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df363d7a9124ff3fb875a920bdae9c21 = $(`<div id="html_df363d7a9124ff3fb875a920bdae9c21" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Trans-Pacific Express (TPE) Cable System<br>         <b>Fault Description:</b> Between Tamsui, Taiwan and Chongming, China<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2021-03-01<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_b4424ff31782766c7c1078f9fd46530c.setContent(html_df363d7a9124ff3fb875a920bdae9c21);
+            
+        
+
+        circle_marker_d4515c1082411246a0a249c07c7a3d42.bindPopup(popup_b4424ff31782766c7c1078f9fd46530c)
+        ;
+
+        
+    
+    
+            var circle_marker_4eb842b1992c5eed24e39b77fd197787 = L.circleMarker(
+                [-6.171876390816321, 106.82782855810404],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_0dd2d5b3bf3137ac82679c259045911c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f48992bf206e73506047b6f6a82e91e4 = $(`<div id="html_f48992bf206e73506047b6f6a82e91e4" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> B2JS (Jakarta-Bangka-Batam-Singapore) Cable System<br>         <b>Fault Description:</b> Between Ancol and Bangka, Indonesia<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2021-02-22<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_0dd2d5b3bf3137ac82679c259045911c.setContent(html_f48992bf206e73506047b6f6a82e91e4);
+            
+        
+
+        circle_marker_4eb842b1992c5eed24e39b77fd197787.bindPopup(popup_0dd2d5b3bf3137ac82679c259045911c)
+        ;
+
+        
+    
+    
+            var circle_marker_f43d788af3d07e9faf1febd10a211b82 = L.circleMarker(
+                [41.74435878948223, 6.525069613519291],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_11fe7fa6167255e3ccb285b025ecde24 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e528394cd2002ae59dfbe71bce590f7 = $(`<div id="html_2e528394cd2002ae59dfbe71bce590f7" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SeaMeWe-5<br>         <b>Fault Description:</b> Off France<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2021-02-18<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_11fe7fa6167255e3ccb285b025ecde24.setContent(html_2e528394cd2002ae59dfbe71bce590f7);
+            
+        
+
+        circle_marker_f43d788af3d07e9faf1febd10a211b82.bindPopup(popup_11fe7fa6167255e3ccb285b025ecde24)
+        ;
+
+        
+    
+    
+            var circle_marker_6af3c9bd6953855e477f72caab1d7c9b = L.circleMarker(
+                [30.708097004575936, 31.387552000703497],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_43521d4909bf78f78adf241293c03ee5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9796386e95b6622c2a1e5dc93f02cbce = $(`<div id="html_9796386e95b6622c2a1e5dc93f02cbce" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SeaMeWe-4<br>         <b>Fault Description:</b> Off Abu Talat, Egypt<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2021-02-16<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_43521d4909bf78f78adf241293c03ee5.setContent(html_9796386e95b6622c2a1e5dc93f02cbce);
+            
+        
+
+        circle_marker_6af3c9bd6953855e477f72caab1d7c9b.bindPopup(popup_43521d4909bf78f78adf241293c03ee5)
+        ;
+
+        
+    
+    
+            var circle_marker_76bb6b0b799a748da1f266dc5e06446e = L.circleMarker(
+                [13.92930384327183, -17.54991333213278],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_af283b95db9ace28b1890511d942c3e0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_940d6ca048da6e5032a6151882f97c8f = $(`<div id="html_940d6ca048da6e5032a6151882f97c8f" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Africa Coast to Europe (ACE)<br>         <b>Fault Description:</b> Off Brikama, Gambia<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2021-02-09<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_af283b95db9ace28b1890511d942c3e0.setContent(html_940d6ca048da6e5032a6151882f97c8f);
+            
+        
+
+        circle_marker_76bb6b0b799a748da1f266dc5e06446e.bindPopup(popup_af283b95db9ace28b1890511d942c3e0)
+        ;
+
+        
+    
+    
+            var circle_marker_0393e075e07c0144c07cd561ba78e2ab = L.circleMarker(
+                [24.12261698700344, 125.54998529515227],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_8d80576703c27ed9c9a2bbd03fa68451 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b7f134391c9598daf422c78b81c899d2 = $(`<div id="html_b7f134391c9598daf422c78b81c899d2" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> Between Hong Kong and Japan<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2021-01-09<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_8d80576703c27ed9c9a2bbd03fa68451.setContent(html_b7f134391c9598daf422c78b81c899d2);
+            
+        
+
+        circle_marker_0393e075e07c0144c07cd561ba78e2ab.bindPopup(popup_8d80576703c27ed9c9a2bbd03fa68451)
+        ;
+
+        
+    
+    
+            var circle_marker_63dfb972ca81350fc105862b4fef32c7 = L.circleMarker(
+                [2.803404866588448, 105.13124975997611],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_095889a23dcc7577abd37152285d0380 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3a42506db64e996f28df091652032c2a = $(`<div id="html_3a42506db64e996f28df091652032c2a" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Tata TGN-Intra Asia (TGN-IA)<br>         <b>Fault Description:</b> Off Singapore<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2021-01-01<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_095889a23dcc7577abd37152285d0380.setContent(html_3a42506db64e996f28df091652032c2a);
+            
+        
+
+        circle_marker_63dfb972ca81350fc105862b4fef32c7.bindPopup(popup_095889a23dcc7577abd37152285d0380)
+        ;
+
+        
+    
+    
+            var circle_marker_b0a26df723ea55d95ea5b2933f6c099a = L.circleMarker(
+                [16.965102599435927, -62.09988177192116],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_9fc9c31eb2ec187866310ea68326fd3e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b2346937b0f1f9d3ed9d12effe15d6bc = $(`<div id="html_b2346937b0f1f9d3ed9d12effe15d6bc" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Eastern Caribbean Fiber System (ECFS)<br>         <b>Fault Description:</b> Off Sainte-Rose, Guadeloupe<br>         <b>Region:</b> Latin America<br>         <b>Date of Fault:</b> 2020-12-11<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_9fc9c31eb2ec187866310ea68326fd3e.setContent(html_b2346937b0f1f9d3ed9d12effe15d6bc);
+            
+        
+
+        circle_marker_b0a26df723ea55d95ea5b2933f6c099a.bindPopup(popup_9fc9c31eb2ec187866310ea68326fd3e)
+        ;
+
+        
+    
+    
+            var circle_marker_eb84c8e4507fb50fe1980b9e28066ef1 = L.circleMarker(
+                [2.255504211923801, 46.80004108235159],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_71d8c7dd95a5cd0840fab42599015711 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b74f2e868d4646959203455867daa6bb = $(`<div id="html_b74f2e868d4646959203455867daa6bb" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Eastern Africa Submarine System (EASSy)<br>         <b>Fault Description:</b> Off Somalia<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2020-10-17<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_71d8c7dd95a5cd0840fab42599015711.setContent(html_b74f2e868d4646959203455867daa6bb);
+            
+        
+
+        circle_marker_eb84c8e4507fb50fe1980b9e28066ef1.bindPopup(popup_71d8c7dd95a5cd0840fab42599015711)
+        ;
+
+        
+    
+    
+            var circle_marker_fe5a9d646c79f7fb95f721d9e1bfe075 = L.circleMarker(
+                [54.03403825672422, 6.975069294735365],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_2bd6ca4a4056d865c31ba106b317d3ca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_90507f2720de896631a5bae327239ae4 = $(`<div id="html_90507f2720de896631a5bae327239ae4" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> COBRAcable<br>         <b>Fault Description:</b> Between Denmark and Netherlands<br>         <b>Region:</b> Europe<br>         <b>Date of Fault:</b> 2020-09-30<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_2bd6ca4a4056d865c31ba106b317d3ca.setContent(html_90507f2720de896631a5bae327239ae4);
+            
+        
+
+        circle_marker_fe5a9d646c79f7fb95f721d9e1bfe075.bindPopup(popup_2bd6ca4a4056d865c31ba106b317d3ca)
+        ;
+
+        
+    
+    
+            var circle_marker_3085202610ff21463558226844603572 = L.circleMarker(
+                [9.746236973759974, 107.77499788712005],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_c97d13823e013a59992599eb20ed2afe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_26468f41dc914eb200d07adc31530cf4 = $(`<div id="html_26468f41dc914eb200d07adc31530cf4" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> Off Vungtau, Vietnam<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2021-06-22<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_c97d13823e013a59992599eb20ed2afe.setContent(html_26468f41dc914eb200d07adc31530cf4);
+            
+        
+
+        circle_marker_3085202610ff21463558226844603572.bindPopup(popup_c97d13823e013a59992599eb20ed2afe)
+        ;
+
+        
+    
+    
+            var circle_marker_05e8a84832ad00e1aaf9fe365ffccb46 = L.circleMarker(
+                [26.010548668010795, -80.16016897784432],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_b6406ec075f1f2f978d214b9e3b9d26d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd219d18d16e11b2d431912223a3157b = $(`<div id="html_fd219d18d16e11b2d431912223a3157b" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Maya-1<br>         <b>Fault Description:</b> Off Florida<br>         <b>Region:</b> Latin America<br>         <b>Date of Fault:</b> 2020-09-13<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_b6406ec075f1f2f978d214b9e3b9d26d.setContent(html_fd219d18d16e11b2d431912223a3157b);
+            
+        
+
+        circle_marker_05e8a84832ad00e1aaf9fe365ffccb46.bindPopup(popup_b6406ec075f1f2f978d214b9e3b9d26d)
+        ;
+
+        
+    
+    
+            var circle_marker_bbcc18aeb7062a60d8a582bd153b8716 = L.circleMarker(
+                [49.58728674004685, -3.599923213840749],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_66459f012616d6693c39311883978386 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_deb7745c584671d33515ea2446434ee8 = $(`<div id="html_deb7745c584671d33515ea2446434ee8" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> High-capacity Undersea Guernsey Optical-fibre (HUGO)<br>         <b>Fault Description:</b> Off Porthcurno beach, United Kingdom<br>         <b>Region:</b> Europe<br>         <b>Date of Fault:</b> 2020-08-26<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_66459f012616d6693c39311883978386.setContent(html_deb7745c584671d33515ea2446434ee8);
+            
+        
+
+        circle_marker_bbcc18aeb7062a60d8a582bd153b8716.bindPopup(popup_66459f012616d6693c39311883978386)
+        ;
+
+        
+    
+    
+            var circle_marker_a6ec71e66cfa7d13b1130cd5c8cb756a = L.circleMarker(
+                [2.255504211923801, 46.80004108235159],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_3741785246943ce050261429c11a22f2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_95c23ca8584c8fdf3cdb446867f21338 = $(`<div id="html_95c23ca8584c8fdf3cdb446867f21338" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Eastern Africa Submarine System (EASSy)<br>         <b>Fault Description:</b> Off Mogadishu, Somalia<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2020-07-26<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_3741785246943ce050261429c11a22f2.setContent(html_95c23ca8584c8fdf3cdb446867f21338);
+            
+        
+
+        circle_marker_a6ec71e66cfa7d13b1130cd5c8cb756a.bindPopup(popup_3741785246943ce050261429c11a22f2)
+        ;
+
+        
+    
+    
+            var circle_marker_292605293622817f53fa1f7af90a03d5 = L.circleMarker(
+                [53.76891056666807, 5.400070410479286],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_219d41fc96d1f2eb8ce861508e4a6833 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7e960c983093c80fda4621718d0e03e9 = $(`<div id="html_7e960c983093c80fda4621718d0e03e9" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Atlantic Crossing-1 (AC-1)<br>         <b>Fault Description:</b> Off Sylt island, Germany<br>         <b>Region:</b> Trans-Atlantic<br>         <b>Date of Fault:</b> 2020-07-07<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_219d41fc96d1f2eb8ce861508e4a6833.setContent(html_7e960c983093c80fda4621718d0e03e9);
+            
+        
+
+        circle_marker_292605293622817f53fa1f7af90a03d5.bindPopup(popup_219d41fc96d1f2eb8ce861508e4a6833)
+        ;
+
+        
+    
+    
+            var circle_marker_48c07a933bf498722b981ccc68a79d32 = L.circleMarker(
+                [5.368393581488473, 100.40982310408316],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_103cbd066b2f92aefdaa9119e2b2be18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_795d950b6e4cc39c49cbd7bfb8b60738 = $(`<div id="html_795d950b6e4cc39c49cbd7bfb8b60738" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Africa Europe-1 (AAE-1)<br>         <b>Fault Description:</b> Off Hong Kong<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2020-06-03<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_103cbd066b2f92aefdaa9119e2b2be18.setContent(html_795d950b6e4cc39c49cbd7bfb8b60738);
+            
+        
+
+        circle_marker_48c07a933bf498722b981ccc68a79d32.bindPopup(popup_103cbd066b2f92aefdaa9119e2b2be18)
+        ;
+
+        
+    
+    
+            var circle_marker_af836250f7bf3608a60bb02b91d5e105 = L.circleMarker(
+                [6.852191098754328, 107.99999772772827],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_1d45d0048680c73f56cddf0813128eee = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4950fc45ca9c0a5e2895c442d7457d5e = $(`<div id="html_4950fc45ca9c0a5e2895c442d7457d5e" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> Between Vietnam and Singapore<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2020-05-23<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_1d45d0048680c73f56cddf0813128eee.setContent(html_4950fc45ca9c0a5e2895c442d7457d5e);
+            
+        
+
+        circle_marker_af836250f7bf3608a60bb02b91d5e105.bindPopup(popup_1d45d0048680c73f56cddf0813128eee)
+        ;
+
+        
+    
+    
+            var circle_marker_26a958d3ccf341d4a1d1cd1965a88a4f = L.circleMarker(
+                [36.05897312258681, -8.999919388432733],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_6e2e1867ad51261309ccae6ce748b5d3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b1a058a4f0f3950753d6e5e3835965ee = $(`<div id="html_b1a058a4f0f3950753d6e5e3835965ee" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Europe India Gateway (EIG)<br>         <b>Fault Description:</b> Between Portugal & Gibraltar<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2020-04-28<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_6e2e1867ad51261309ccae6ce748b5d3.setContent(html_b1a058a4f0f3950753d6e5e3835965ee);
+            
+        
+
+        circle_marker_26a958d3ccf341d4a1d1cd1965a88a4f.bindPopup(popup_6e2e1867ad51261309ccae6ce748b5d3)
+        ;
+
+        
+    
+    
+            var circle_marker_9923057c5ed827cabf290b8feb00b22d = L.circleMarker(
+                [24.007054825363046, 122.62498736724832],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_e3249b60ecda710fb3e397be51016fe1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f0711b498b67e4bab01c5090331061b6 = $(`<div id="html_f0711b498b67e4bab01c5090331061b6" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> APCN-2<br>         <b>Fault Description:</b> Between Hong Kong and Chongming, China<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2020-04-09<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_e3249b60ecda710fb3e397be51016fe1.setContent(html_f0711b498b67e4bab01c5090331061b6);
+            
+        
+
+        circle_marker_9923057c5ed827cabf290b8feb00b22d.bindPopup(popup_e3249b60ecda710fb3e397be51016fe1)
+        ;
+
+        
+    
+    
+            var circle_marker_296ae3d74dbd7d9a0ab9c24c62265cc5 = L.circleMarker(
+                [28.95155473219332, 33.04692582518743],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_d4b244f592381d963cbd6443c148a561 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_86ba73afced101bd4ccd6ebd353e4430 = $(`<div id="html_86ba73afced101bd4ccd6ebd353e4430" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SeaMeWe-4<br>         <b>Fault Description:</b> Off Suez, Egypt<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2020-04-08<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_d4b244f592381d963cbd6443c148a561.setContent(html_86ba73afced101bd4ccd6ebd353e4430);
+            
+        
+
+        circle_marker_296ae3d74dbd7d9a0ab9c24c62265cc5.bindPopup(popup_d4b244f592381d963cbd6443c148a561)
+        ;
+
+        
+    
+    
+            var circle_marker_09d765509b51a13e5b3a30322fc8e747 = L.circleMarker(
+                [36.90282046530194, 7.755438741914387],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_47e585cbe7bd6724cf5d439cf5e240f0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9ede744a422090d7a8d64380afa2e725 = $(`<div id="html_9ede744a422090d7a8d64380afa2e725" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SeaMeWe-4<br>         <b>Fault Description:</b> Off Sardinia, Italy<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2020-04-06<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_47e585cbe7bd6724cf5d439cf5e240f0.setContent(html_9ede744a422090d7a8d64380afa2e725);
+            
+        
+
+        circle_marker_09d765509b51a13e5b3a30322fc8e747.bindPopup(popup_47e585cbe7bd6724cf5d439cf5e240f0)
+        ;
+
+        
+    
+    
+            var circle_marker_bc77300d7b2fbaa28b4be7b79ede304f = L.circleMarker(
+                [18.251816319028222, -17.0999136503208],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_11ca3e86ffd93513a223ff1e72031fff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_252a7476fe98c79dd946ae01f7de609e = $(`<div id="html_252a7476fe98c79dd946ae01f7de609e" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Africa Coast to Europe (ACE)<br>         <b>Fault Description:</b> Off Nouakchott, Mauritania<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2020-04-03<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_11ca3e86ffd93513a223ff1e72031fff.setContent(html_252a7476fe98c79dd946ae01f7de609e);
+            
+        
+
+        circle_marker_bc77300d7b2fbaa28b4be7b79ede304f.bindPopup(popup_11ca3e86ffd93513a223ff1e72031fff)
+        ;
+
+        
+    
+    
+            var circle_marker_110602e53e86575f151f21d38f9c577c = L.circleMarker(
+                [8.635699417327467, -84.59986583272143],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_e3e0e6506b9d018c45dc32af12969947 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a8b3b04fc9252b700bcf1b23780ad73c = $(`<div id="html_a8b3b04fc9252b700bcf1b23780ad73c" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Pan-American Crossing (PAC)<br>         <b>Fault Description:</b> Off Costa Rica<br>         <b>Region:</b> Latin America<br>         <b>Date of Fault:</b> 2020-03-21<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_e3e0e6506b9d018c45dc32af12969947.setContent(html_a8b3b04fc9252b700bcf1b23780ad73c);
+            
+        
+
+        circle_marker_110602e53e86575f151f21d38f9c577c.bindPopup(popup_e3e0e6506b9d018c45dc32af12969947)
+        ;
+
+        
+    
+    
+            var circle_marker_9c4e1515540c29cbeee0fa38fa3f269f = L.circleMarker(
+                [38.4430794831419, -9.102749315587026],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_5e03d038805a8be9cffbdd007d9ec73d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_912ec18610ff9f08fc10f29c41c1a3af = $(`<div id="html_912ec18610ff9f08fc10f29c41c1a3af" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SAT-3/WASC<br>         <b>Fault Description:</b> Off Muanda, Congo, Dem. Rep.<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2020-03-11<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_5e03d038805a8be9cffbdd007d9ec73d.setContent(html_912ec18610ff9f08fc10f29c41c1a3af);
+            
+        
+
+        circle_marker_9c4e1515540c29cbeee0fa38fa3f269f.bindPopup(popup_5e03d038805a8be9cffbdd007d9ec73d)
+        ;
+
+        
+    
+    
+            var circle_marker_cacbd0b857209bc1789d48a7bf413cc5 = L.circleMarker(
+                [-4.77878776891936, 11.863635831629022],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_9074a9e4ace7c76afb6a5318e805d941 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6dbb1a217e703f35f7192948bba7ede8 = $(`<div id="html_6dbb1a217e703f35f7192948bba7ede8" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> West Africa Cable System (WACS)<br>         <b>Fault Description:</b> Off Muanda, Congo, Dem. Rep.<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2020-01-23<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_9074a9e4ace7c76afb6a5318e805d941.setContent(html_6dbb1a217e703f35f7192948bba7ede8);
+            
+        
+
+        circle_marker_cacbd0b857209bc1789d48a7bf413cc5.bindPopup(popup_9074a9e4ace7c76afb6a5318e805d941)
+        ;
+
+        
+    
+    
+            var circle_marker_e1f966b1ab659f563bfa0fbf25876860 = L.circleMarker(
+                [6.126307297218732, 1.227803366152544],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_f42c4c78e0c22842304650ffcdc4c06e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6ce4a962ec82ffcb9f7db0345c17150a = $(`<div id="html_6ce4a962ec82ffcb9f7db0345c17150a" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> West Africa Cable System (WACS)<br>         <b>Fault Description:</b> Off Ghana<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2020-01-16<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_f42c4c78e0c22842304650ffcdc4c06e.setContent(html_6ce4a962ec82ffcb9f7db0345c17150a);
+            
+        
+
+        circle_marker_e1f966b1ab659f563bfa0fbf25876860.bindPopup(popup_f42c4c78e0c22842304650ffcdc4c06e)
+        ;
+
+        
+    
+    
+            var circle_marker_e40a623b875f49ea04a39bc23174bf9e = L.circleMarker(
+                [14.801154224791581, 42.1312943897355],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_2b91c5551f8cad0ecca23732970fd33c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fa0c831a070fae379aa0c5877c81f1c5 = $(`<div id="html_fa0c831a070fae379aa0c5877c81f1c5" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> FALCON<br>         <b>Fault Description:</b> Between Oman and Egypt<br>         <b>Region:</b> Middle East<br>         <b>Date of Fault:</b> 2020-01-09<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_2b91c5551f8cad0ecca23732970fd33c.setContent(html_fa0c831a070fae379aa0c5877c81f1c5);
+            
+        
+
+        circle_marker_e40a623b875f49ea04a39bc23174bf9e.bindPopup(popup_2b91c5551f8cad0ecca23732970fd33c)
+        ;
+
+        
+    
+    
+            var circle_marker_e780da7da57082655a698b14a1b1be5b = L.circleMarker(
+                [12.72515592356304, 48.60003980721571],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_7c94068d71364edb000f3ed19f2a1d20 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb7daa236d0f5a425ea704bebe6396a4 = $(`<div id="html_cb7daa236d0f5a425ea704bebe6396a4" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> FLAG Europe-Asia (FEA)<br>         <b>Fault Description:</b> Between India and Egypt<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2020-01-09<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_7c94068d71364edb000f3ed19f2a1d20.setContent(html_cb7daa236d0f5a425ea704bebe6396a4);
+            
+        
+
+        circle_marker_e780da7da57082655a698b14a1b1be5b.bindPopup(popup_7c94068d71364edb000f3ed19f2a1d20)
+        ;
+
+        
+    
+    
+            var circle_marker_5a5e5374fbf293941e7e13ac933e5e73 = L.circleMarker(
+                [25.957179978764344, 52.20003725694376],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_2d1ec8b143f9c527de503385983fcfb4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b3442b7590ea44acdcb13071bd51bab0 = $(`<div id="html_b3442b7590ea44acdcb13071bd51bab0" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Africa Europe-1 (AAE-1)<br>         <b>Fault Description:</b> Off Doha, Qatar<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2019-12-15<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_2d1ec8b143f9c527de503385983fcfb4.setContent(html_b3442b7590ea44acdcb13071bd51bab0);
+            
+        
+
+        circle_marker_5a5e5374fbf293941e7e13ac933e5e73.bindPopup(popup_2d1ec8b143f9c527de503385983fcfb4)
+        ;
+
+        
+    
+    
+            var circle_marker_0d83ba2ba25645e651192dbeffdd7003 = L.circleMarker(
+                [19.07607425728523, 72.87590260996693],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_fc6fff930fb3c565ec1f4cb7e7d98883 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f078d3e8ad2ebcb75a918bad640b4ab6 = $(`<div id="html_f078d3e8ad2ebcb75a918bad640b4ab6" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SEACOM/Tata TGN-Eurasia<br>         <b>Fault Description:</b> Between Mombasa, Kenya and Zafarana, Egypt<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2019-10-22<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_fc6fff930fb3c565ec1f4cb7e7d98883.setContent(html_f078d3e8ad2ebcb75a918bad640b4ab6);
+            
+        
+
+        circle_marker_0d83ba2ba25645e651192dbeffdd7003.bindPopup(popup_fc6fff930fb3c565ec1f4cb7e7d98883)
+        ;
+
+        
+    
+    
+            var circle_marker_267d7d3018b8fae72e042d784285990d = L.circleMarker(
+                [9.746236973759974, 107.77499788712005],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_d0d51bc1281d5fd8f3d1a90ae8d3c930 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a99ce3ad5270daf46b640cd111d6710d = $(`<div id="html_a99ce3ad5270daf46b640cd111d6710d" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> Off Vung Tau, Vietnam<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2021-06-22<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_d0d51bc1281d5fd8f3d1a90ae8d3c930.setContent(html_a99ce3ad5270daf46b640cd111d6710d);
+            
+        
+
+        circle_marker_267d7d3018b8fae72e042d784285990d.bindPopup(popup_d0d51bc1281d5fd8f3d1a90ae8d3c930)
+        ;
+
+        
+    
+    
+            var circle_marker_d7a8dc99ad6c893ff13a99b07b3994da = L.circleMarker(
+                [15.886035719079029, 108.89999709016024],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_50de72b03d49a39824322ac8ac501e00 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_88fa57c0000c480b74b68ca890af6afc = $(`<div id="html_88fa57c0000c480b74b68ca890af6afc" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> Off Danang, Vietnam<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2019-05-27<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_50de72b03d49a39824322ac8ac501e00.setContent(html_88fa57c0000c480b74b68ca890af6afc);
+            
+        
+
+        circle_marker_d7a8dc99ad6c893ff13a99b07b3994da.bindPopup(popup_50de72b03d49a39824322ac8ac501e00)
+        ;
+
+        
+    
+    
+            var circle_marker_4e8374899e92e146722d8097cda55cbd = L.circleMarker(
+                [20.796306105108872, 113.84999358353615],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_ac664242e98afea1536cea8e061e72df = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e34438322c70b539620de9210e5e26f = $(`<div id="html_2e34438322c70b539620de9210e5e26f" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> Off Hong Kong, China<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2019-02-27<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_ac664242e98afea1536cea8e061e72df.setContent(html_2e34438322c70b539620de9210e5e26f);
+            
+        
+
+        circle_marker_4e8374899e92e146722d8097cda55cbd.bindPopup(popup_ac664242e98afea1536cea8e061e72df)
+        ;
+
+        
+    
+    
+            var circle_marker_aea4b40ea4a119fd34aacd05168567d0 = L.circleMarker(
+                [65.83404693088374, -53.99988751003309],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_d6d50157587e9a47be3ab151e20aace4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d36150f7598736cca599586a4e5ee1a2 = $(`<div id="html_d36150f7598736cca599586a4e5ee1a2" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Greenland Connect North<br>         <b>Fault Description:</b> Between Sisimiut, Greenland and Maniitsoq, Greenland<br>         <b>Region:</b> Other<br>         <b>Date of Fault:</b> 2019-01-21<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_d6d50157587e9a47be3ab151e20aace4.setContent(html_d36150f7598736cca599586a4e5ee1a2);
+            
+        
+
+        circle_marker_aea4b40ea4a119fd34aacd05168567d0.bindPopup(popup_d6d50157587e9a47be3ab151e20aace4)
+        ;
+
+        
+    
+    
+            var circle_marker_f466c4dc168b998a60d7b8e9c5dbc327 = L.circleMarker(
+                [-5.049857167366764, 42.30004427019158],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_74d82e6fabb752520911a1c5fbbaed4a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36947d7952731c99028ec2e48636b21a = $(`<div id="html_36947d7952731c99028ec2e48636b21a" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Lower Indian Ocean Network 2 (LION2)<br>         <b>Fault Description:</b> Off Kenya<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2018-10-03<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_74d82e6fabb752520911a1c5fbbaed4a.setContent(html_36947d7952731c99028ec2e48636b21a);
+            
+        
+
+        circle_marker_f466c4dc168b998a60d7b8e9c5dbc327.bindPopup(popup_74d82e6fabb752520911a1c5fbbaed4a)
+        ;
+
+        
+    
+    
+            var circle_marker_995151a9067d087eac4b690904f9de62 = L.circleMarker(
+                [9.746236973759974, 107.77499788712005],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_583245a1c54b3ba1034671d29ff7c1b9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_edc7db17c6a9c80492d8c80ea828cc7c = $(`<div id="html_edc7db17c6a9c80492d8c80ea828cc7c" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> Off Vung Tau, Vietnam<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2021-06-22<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_583245a1c54b3ba1034671d29ff7c1b9.setContent(html_edc7db17c6a9c80492d8c80ea828cc7c);
+            
+        
+
+        circle_marker_995151a9067d087eac4b690904f9de62.bindPopup(popup_583245a1c54b3ba1034671d29ff7c1b9)
+        ;
+
+        
+    
+    
+            var circle_marker_becda2f36c3a77896f7c7ff803056931 = L.circleMarker(
+                [31.766210259727007, 122.84998720785636],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_d292b832a34de03cdd4f89abd2e90959 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_90e0834fcac222b21cf82d8e66b0a6f0 = $(`<div id="html_90e0834fcac222b21cf82d8e66b0a6f0" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> Off Chongming, China<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2018-04-23<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_d292b832a34de03cdd4f89abd2e90959.setContent(html_90e0834fcac222b21cf82d8e66b0a6f0);
+            
+        
+
+        circle_marker_becda2f36c3a77896f7c7ff803056931.bindPopup(popup_d292b832a34de03cdd4f89abd2e90959)
+        ;
+
+        
+    
+    
+            var circle_marker_e47ad749a65c579b2a295bb94a7c8405 = L.circleMarker(
+                [18.251816319028222, -17.0999136503208],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_64b126f63d2915b80029a7cb4bd239d0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19ed88f6167100ea0944214e61ce7311 = $(`<div id="html_19ed88f6167100ea0944214e61ce7311" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Africa Coast to Europe (ACE)<br>         <b>Fault Description:</b> Off Noukachott, Mauritania<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2020-04-03<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_64b126f63d2915b80029a7cb4bd239d0.setContent(html_19ed88f6167100ea0944214e61ce7311);
+            
+        
+
+        circle_marker_e47ad749a65c579b2a295bb94a7c8405.bindPopup(popup_64b126f63d2915b80029a7cb4bd239d0)
+        ;
+
+        
+    
+    
+            var circle_marker_01c6019741f1cd4dded99d46e1b8d817 = L.circleMarker(
+                [18.251816319028222, 113.84999358353615],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_19c770b5f7c85974ecc8096da251ae37 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2b6367efd105f056f50a73c88c203091 = $(`<div id="html_2b6367efd105f056f50a73c88c203091" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia Pacific Gateway (APG)<br>         <b>Fault Description:</b> Between Hong Kong and Vietnam<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2018-02-27<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_19c770b5f7c85974ecc8096da251ae37.setContent(html_2b6367efd105f056f50a73c88c203091);
+            
+        
+
+        circle_marker_01c6019741f1cd4dded99d46e1b8d817.bindPopup(popup_19c770b5f7c85974ecc8096da251ae37)
+        ;
+
+        
+    
+    
+            var circle_marker_4efe2ecc95f1de20e5dd39683cbb9e9e = L.circleMarker(
+                [8.8024990629144, 78.14522887712651],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_d111ad1bc1133b7a4a67886c0a2ba4cc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a2f7b982ae95cdef5477e513cc0fb5ff = $(`<div id="html_a2f7b982ae95cdef5477e513cc0fb5ff" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Bharat Lanka Cable System<br>         <b>Fault Description:</b> 5.8 km off Tuticorin, India<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2018-02-01<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_d111ad1bc1133b7a4a67886c0a2ba4cc.setContent(html_a2f7b982ae95cdef5477e513cc0fb5ff);
+            
+        
+
+        circle_marker_4efe2ecc95f1de20e5dd39683cbb9e9e.bindPopup(popup_d111ad1bc1133b7a4a67886c0a2ba4cc)
+        ;
+
+        
+    
+    
+            var circle_marker_5352bf48553b799b74ed0a94b9fe2d94 = L.circleMarker(
+                [9.746236973759974, 107.77499788712005],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_6fb01a9127f4aea8dd0f0446312a562a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e0448aef7d55a92fb7c0657b8ebff2fa = $(`<div id="html_e0448aef7d55a92fb7c0657b8ebff2fa" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> Off Vung Tau, Vietnam<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2021-06-22<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_6fb01a9127f4aea8dd0f0446312a562a.setContent(html_e0448aef7d55a92fb7c0657b8ebff2fa);
+            
+        
+
+        circle_marker_5352bf48553b799b74ed0a94b9fe2d94.bindPopup(popup_6fb01a9127f4aea8dd0f0446312a562a)
+        ;
+
+        
+    
+    
+            var circle_marker_1e3a9fdfc5593ffc07de1701a5a9c99f = L.circleMarker(
+                [2.29570245694968, 103.85068066714335],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_8ee0d9ca9fab2d51eed56d766e8d9456 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a76f399f87b5e088779d70362b79caaa = $(`<div id="html_a76f399f87b5e088779d70362b79caaa" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> Off Hong Kong <br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2017-10-12<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_8ee0d9ca9fab2d51eed56d766e8d9456.setContent(html_a76f399f87b5e088779d70362b79caaa);
+            
+        
+
+        circle_marker_1e3a9fdfc5593ffc07de1701a5a9c99f.bindPopup(popup_8ee0d9ca9fab2d51eed56d766e8d9456)
+        ;
+
+        
+    
+    
+            var circle_marker_807f2960683d9e4d0173a8ca256a10de = L.circleMarker(
+                [22.271493895850078, 113.94911351331866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_43e9c0f6f188746f2c2f18916d5560e0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fcf30583ddd46df12608171c5cd78c27 = $(`<div id="html_fcf30583ddd46df12608171c5cd78c27" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> 54 km off Hong Kong<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2017-10-12<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_43e9c0f6f188746f2c2f18916d5560e0.setContent(html_fcf30583ddd46df12608171c5cd78c27);
+            
+        
+
+        circle_marker_807f2960683d9e4d0173a8ca256a10de.bindPopup(popup_43e9c0f6f188746f2c2f18916d5560e0)
+        ;
+
+        
+    
+    
+            var circle_marker_e0d6531d7793e0dfbe7dbe43c885d742 = L.circleMarker(
+                [22.24961578335278, 114.18397334694201],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_06c6c572f8087e261375b28f26d10d07 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_67ba03c5aaf19cf032996ec3996a4660 = $(`<div id="html_67ba03c5aaf19cf032996ec3996a4660" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Tata TGN-Intra Asia (TGN-IA)<br>         <b>Fault Description:</b> 54 km off Hong Kong<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2017-08-27<br>         <b>Category:</b> Environmental     </div>`)[0];
+                popup_06c6c572f8087e261375b28f26d10d07.setContent(html_67ba03c5aaf19cf032996ec3996a4660);
+            
+        
+
+        circle_marker_e0d6531d7793e0dfbe7dbe43c885d742.bindPopup(popup_06c6c572f8087e261375b28f26d10d07)
+        ;
+
+        
+    
+    
+            var circle_marker_1daf7ee64967d9720b394017714c9a63 = L.circleMarker(
+                [22.05298561667754, 38.137547218943524],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_655f9a18a25480ebbda680f13eeca753 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e1ccaf3c0812f3001bb59e25b883d1bb = $(`<div id="html_e1ccaf3c0812f3001bb59e25b883d1bb" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> IMEWE<br>         <b>Fault Description:</b> Off Saudi Arabia<br>         <b>Region:</b> Europe-Asia<br>         <b>Date of Fault:</b> 2017-08-05<br>         <b>Category:</b> Aging     </div>`)[0];
+                popup_655f9a18a25480ebbda680f13eeca753.setContent(html_e1ccaf3c0812f3001bb59e25b883d1bb);
+            
+        
+
+        circle_marker_1daf7ee64967d9720b394017714c9a63.bindPopup(popup_655f9a18a25480ebbda680f13eeca753)
+        ;
+
+        
+    
+    
+            var circle_marker_a2989babb7552a0f568ae4a8a538e199 = L.circleMarker(
+                [-32.61276000573574, 15.9750629190554],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_ede12e0d312f25dd6a65803b5d8fb32d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19d1b7fb7490eea5038b4c83d9ce85cf = $(`<div id="html_19d1b7fb7490eea5038b4c83d9ce85cf" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SAT-3/WASC<br>         <b>Fault Description:</b> Off Melkbosstrand, South Africa<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2017-07-12<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_ede12e0d312f25dd6a65803b5d8fb32d.setContent(html_19d1b7fb7490eea5038b4c83d9ce85cf);
+            
+        
+
+        circle_marker_a2989babb7552a0f568ae4a8a538e199.bindPopup(popup_ede12e0d312f25dd6a65803b5d8fb32d)
+        ;
+
+        
+    
+    
+            var circle_marker_54c5f81a4521d9c654497e512ae82da9 = L.circleMarker(
+                [-5.933373731471328, 12.349965487108514],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_55d0fbb6a61f64eddd05e3177bb8fb99 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_39ba1bf0cd74f99c55a5ae1f843df550 = $(`<div id="html_39ba1bf0cd74f99c55a5ae1f843df550" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> West Africa Cable System (WACS)<br>         <b>Fault Description:</b> Off Point-Noire, Congo, Rep.<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2017-06-09<br>         <b>Category:</b> Human Activity     </div>`)[0];
+                popup_55d0fbb6a61f64eddd05e3177bb8fb99.setContent(html_39ba1bf0cd74f99c55a5ae1f843df550);
+            
+        
+
+        circle_marker_54c5f81a4521d9c654497e512ae82da9.bindPopup(popup_55d0fbb6a61f64eddd05e3177bb8fb99)
+        ;
+
+        
+    
+    
+            var circle_marker_422ec2628ce21b67b744962c8355233b = L.circleMarker(
+                [3.81517342094113, 103.32266104119763],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_ee9c8baabce7d578d6874b4dd3579c95 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8352578b40f669927248b9120b35efd4 = $(`<div id="html_8352578b40f669927248b9120b35efd4" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> APCN-2<br>         <b>Fault Description:</b> Off Malaysia<br>         <b>Region:</b> Asia<br>         <b>Date of Fault:</b> 2017-04-11<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_ee9c8baabce7d578d6874b4dd3579c95.setContent(html_8352578b40f669927248b9120b35efd4);
+            
+        
+
+        circle_marker_422ec2628ce21b67b744962c8355233b.bindPopup(popup_ee9c8baabce7d578d6874b4dd3579c95)
+        ;
+
+        
+    
+    
+            var circle_marker_057eb5d2025f2a1909ada805a4e2e753 = L.circleMarker(
+                [12.395734000022975, 43.706293273991584],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_7d68543f3bab7d5a8c4adffcedcbe297 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3bf220e91f1a7b96dabddb7868434eb7 = $(`<div id="html_3bf220e91f1a7b96dabddb7868434eb7" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> SEACOM/Tata TGN-Eurasia<br>         <b>Fault Description:</b> Off Djibouti<br>         <b>Region:</b> Africa<br>         <b>Date of Fault:</b> 2017-04-08<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_7d68543f3bab7d5a8c4adffcedcbe297.setContent(html_3bf220e91f1a7b96dabddb7868434eb7);
+            
+        
+
+        circle_marker_057eb5d2025f2a1909ada805a4e2e753.bindPopup(popup_7d68543f3bab7d5a8c4adffcedcbe297)
+        ;
+
+        
+    
+    
+            var circle_marker_90f7329c599f6275308404ef01a4b357 = L.circleMarker(
+                [12.615395567393394, 111.14999549624025],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_a947aad8e4261acad49f77d05d278acc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e5492019efec84cf3bd0e146edd4f82c = $(`<div id="html_e5492019efec84cf3bd0e146edd4f82c" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> Between Vietnam and Hong Kong<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2017-02-18<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_a947aad8e4261acad49f77d05d278acc.setContent(html_e5492019efec84cf3bd0e146edd4f82c);
+            
+        
+
+        circle_marker_90f7329c599f6275308404ef01a4b357.bindPopup(popup_a947aad8e4261acad49f77d05d278acc)
+        ;
+
+        
+    
+    
+            var circle_marker_f7663405f6512da87c2b95c1c535ab45 = L.circleMarker(
+                [9.746236973759974, 107.77499788712005],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6b959246e521ad4dda305b05a12343d8);
+        
+    
+        var popup_b57b445135ea7ad6dd2f5c5ab3d2a51e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_04bd64a2917f01b730f352c17aa5e975 = $(`<div id="html_04bd64a2917f01b730f352c17aa5e975" style="width: 100.0%; height: 100.0%;">         <b>Cable Name:</b> Asia-America Gateway (AAG) Cable System<br>         <b>Fault Description:</b> Off Vung Tau, Vietnam<br>         <b>Region:</b> Trans-Pacific<br>         <b>Date of Fault:</b> 2021-06-22<br>         <b>Category:</b> NA     </div>`)[0];
+                popup_b57b445135ea7ad6dd2f5c5ab3d2a51e.setContent(html_04bd64a2917f01b730f352c17aa5e975);
+            
+        
+
+        circle_marker_f7663405f6512da87c2b95c1c535ab45.bindPopup(popup_b57b445135ea7ad6dd2f5c5ab3d2a51e)
+        ;
+
+        
+    
+</script>
+</html>
