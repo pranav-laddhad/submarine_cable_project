@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submarine Cable Faults Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        body, html { height: 100%; margin: 0; }
+        #map { width: 100%; height: 100vh; }
+        /* Styling for the legend */
+        .legend {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid black;
+            padding: 10px;
+            font-size: 14px;
+            z-index: 9999;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([20, 0], 2);
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Cache for country coordinates to avoid redundant API calls
+        let countryCache = {};
+
+        // Classification color mapping
+        const classificationColors = {
+            "Aging": "orange",
+            "Geopolitical": "red",
+            "Human Activity": "blue",
+            "Environmental": "green",
+            "NA": "gray"
+        };
+
+        // Function to fetch country coordinates dynamically
+        async function getCountryCoordinates(country) {
+            if (countryCache[country]) return countryCache[country];
+
+            let url = `https://nominatim.openstreetmap.org/search?format=json&q=${country}`;
+            let response = await fetch(url);
+            let data = await response.json();
+
+            if (data.length > 0) {
+                let coords = [parseFloat(data[0].lat), parseFloat(data[0].lon)];
+                countryCache[country] = coords;
+                return coords;
+            }
+            return null;
+        }
+
+        // Load CSV file
+        Papa.parse("articles_classified_results_with_countries_cables.csv", {
+            download: true,
+            header: true,
+            complete: async function(results) {
+                for (let row of results.data) {
+                    let date = row["Date"];
+                    let countriesInvolved = row["Countries Involved"];
+                    let cableName = row["Cable Name"];
+                    let classification = row["Classification"];
+                    let title = row["Title"];
+                    let justification = row["Justification"];
+                    let url = row["URL"];
+
+                    // Use classification color based on the classification
+                    let classificationColor = classificationColors[classification] || classificationColors["NA"];
+
+                    if (countriesInvolved) {
+                        let countryList = countriesInvolved.split(",").map(c => c.trim());
+                        for (let country of countryList) {
+                            let coords = await getCountryCoordinates(country);
+                            if (coords) {
+                                let marker = L.circleMarker(coords, {
+                                    radius: 8,
+                                    color: classificationColor,
+                                    fillColor: classificationColor,
+                                    fillOpacity: 0.8
+                                }).addTo(map);
+
+                                marker.bindPopup(`
+                                    <b>Title:</b> ${title}<br>
+                                    <b>Date:</b> ${date}<br>
+                                    <b>Countries Involved:</b> ${countriesInvolved}<br>
+                                    <b>Cable Name:</b> ${cableName}<br>
+                                    <b>Classification:</b> ${classification}<br>
+                                    <b>Justification:</b> ${justification}<br>
+                                    <a href="${url}" target="_blank">Read more</a>
+                                `);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Add legend to the map
+        var legend = L.control({ position: "bottomleft" });
+
+        legend.onAdd = function () {
+            var div = L.DomUtil.create("div", "legend");
+            div.innerHTML += "<b>Classification Legend</b><br>";
+            for (var classification in classificationColors) {
+                div.innerHTML += '<i style="background:' + classificationColors[classification] + '"></i>' + classification + '<br>';
+            }
+            return div;
+        };
+
+        // Add the legend to the map
+        legend.addTo(map);
+    </script>
+
+</body>
+</html>
